@@ -1789,6 +1789,10 @@ body.pdf-mode .report-final-footer{
     + Structured Report
 </button>
 
+<button class="btn-warning" onclick="undoDelete()">
+    Undo
+</button>
+
     <div
         id="testSuggestions"
         style="
@@ -2007,6 +2011,7 @@ let billData = null;
 let selectedSample = null;
 let uploadedReport = null;
 let allTests = [];
+let deletedRows = [];
 
 function loadTestMaster(){
 
@@ -2689,6 +2694,33 @@ function deleteRow(btn){
     const prevRow =
         row.previousElementSibling;
 
+    // SAVE FOR UNDO
+    deletedRows.push({
+
+        rowHtml: row.outerHTML,
+
+        parent: row.parentNode,
+
+        nextSibling: row.nextElementSibling,
+
+        departmentHtml:
+            (
+                prevRow &&
+                prevRow.classList.contains("department-row")
+            )
+            ? prevRow.outerHTML
+            : null,
+
+        departmentNext:
+            (
+                prevRow &&
+                prevRow.classList.contains("department-row")
+            )
+            ? prevRow.nextElementSibling
+            : null
+
+    });
+
     row.remove();
 
     // REMOVE EMPTY DEPARTMENT ALSO
@@ -2705,7 +2737,6 @@ function deleteRow(btn){
         const nextRow =
             prevRow.nextElementSibling;
 
-        // if no rows below OR next is another department
         if(
 
             !nextRow ||
@@ -2722,6 +2753,79 @@ function deleteRow(btn){
 
     }
 }
+
+function undoDelete(){
+
+    if(deletedRows.length === 0){
+        return;
+    }
+
+    const last =
+        deletedRows.pop();
+
+    // RESTORE DEPARTMENT IF NEEDED
+    if(last.departmentHtml){
+
+        const deptWrap =
+            document.createElement("tbody");
+
+        deptWrap.innerHTML =
+            last.departmentHtml;
+
+        const deptRow =
+            deptWrap.firstElementChild;
+
+        if(
+            last.departmentNext &&
+            !document.body.contains(last.departmentNext)
+        ){
+            last.parent.appendChild(deptRow);
+        }
+    }
+
+    // RESTORE TEST ROW
+    const wrap =
+        document.createElement("tbody");
+
+    wrap.innerHTML =
+        last.rowHtml;
+
+    const restoredRow =
+        wrap.firstElementChild;
+
+    if(
+        last.nextSibling &&
+        document.body.contains(last.nextSibling)
+    ){
+
+        last.parent.insertBefore(
+            restoredRow,
+            last.nextSibling
+        );
+
+    }else{
+
+        last.parent.appendChild(
+            restoredRow
+        );
+
+    }
+}
+
+// CTRL + Z
+document.addEventListener("keydown", function(e){
+
+    if(
+        e.ctrlKey &&
+        e.key.toLowerCase() === "z"
+    ){
+
+        e.preventDefault();
+
+        undoDelete();
+    }
+
+});
 
 function collectReportData(){
 

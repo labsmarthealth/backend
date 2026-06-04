@@ -1,9 +1,19 @@
-
- [
-  {
-  "test_name": "Absolute Band Count",
-  "unit": "/UL",
-  "reference_range": "Adults: 0 - 700 /UL",
+[
+    
+ {
+  "test_name": "Hemoglobin",
+  "unit": "gms/dL",
+  "reference_range": "Birth: 18.0+/-4.0\nDay 3: 18.0+/-3.0\n1 month 14.0+/-2.5 2 months 11.2+/-1.8\n3 months-6years: 12.6 +/-1.5\n6-12 years: 13.5 +/-2.0 Adults: M:135-18 gms\\dl F11.5-16 gms dl",
+  "category": "Haematology",
+  "panel": "CBC",
+  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Cyanmethemoglobin"
+ },
+ {
+  "test_name": "WBC Count",
+  "unit": "cells /cumm",
+  "reference_range": "4000-11000cells cumm",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -11,29 +21,19 @@
   "method": "Automated"
  },
  {
-  "test_name": "Absolute Basophil Count",
+  "test_name": "Lymphocytes",
   "unit": "%",
-  "reference_range": " 00-01%",
+  "reference_range": "20 - 40",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated Flow Cytometry"
  },
  {
-  "test_name": "Absolute Eosinophil Count",
-  "unit": "cells cum",
-  "reference_range": "40-440cells cum",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
- },
- {
-  "test_name": "Absolute Lymphocyte Count",
+  "test_name": "Basophil",
   "unit": "%",
-  "reference_range": "Adults 20-40% New born: 25-35% Child<4yrs: 35-65% Child 4-10yrs: 30-50%",
+  "reference_range": "00-01%",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -41,9 +41,9 @@
   "method": "Automated"
  },
  {
-  "test_name": "Absolute Monocyte Count",
+  "test_name": "Eosinophil",
   "unit": "%",
-  "reference_range": "01-10 % ",
+  "reference_range": "00-06%",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -51,14 +51,44 @@
   "method": "Automated"
  },
  {
-  "test_name": "Absolute Neutrophil Count",
-  "unit": "/UL",
-  "reference_range": "Adults: 1500 - 8000 /UL",
+  "test_name": "Monocyte",
+  "unit": "%",
+  "reference_range": "01-10 %",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
   "method": "Automated"
+ },
+ {
+  "test_name": "ESR",
+  "unit": "mm/hr",
+  "reference_range": "0 - 20",
+  "category": "Haematology",
+  "panel": "CBC",
+  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Westergren Method"
+ },
+ {
+  "test_name": "RBC Count",
+  "unit": "cumm",
+  "reference_range": "3.5-55 million cumm",
+  "category": "Haematology",
+  "panel": "CBC",
+  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Automated"
+ },
+ {
+  "test_name": "Platelet Count",
+  "unit": "cum",
+  "reference_range": "1.5-4.5 lakhs cum",
+  "category": "Haematology",
+  "panel": "CBC",
+  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Impedance"
  },
  {
   "test_name": "Absolute Reticulocyte Count",
@@ -115,19 +145,22 @@
   "test_name": "Bone Marrow Aspiration",
   "reference_range": "Cellularity, M:E Ratio and morphology vary with age and clinical condition",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Bone Marrow Aspiration & Smear Examination",
   "reference_range": "Normal marrow cellularity: 30 - 70% depending on age",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Bone Marrow Biopsy",
   "reference_range": "Normal marrow cellularity: 30 - 70% depending on age",
   "category": "Histopathology",
-  "department": "DEPARTMENT OF HISTOPATHOLOGY"
+  "department": "DEPARTMENT OF HISTOPATHOLOGY",
+  "method": "Histopathology"
  },
  {
   "test_name": "Bronchoscopy Fluid Cell Count",
@@ -146,19 +179,9 @@
   "method": "Manual Microscopy"
  },
  {
-  "test_name": "Hemoglobin",
-  "unit": "gms/dL",
-  "reference_range": "Birth: 18.0+/-4.0\nDay 3: 18.0+/-3.0\n1 month 14.0+/-2.5 2 months 11.2+/-1.8\n3 months-6years: 12.6 +/-1.5\n6-12 years: 13.5 +/-2.0 Adults: M:135-18 gms\\dl F11.5-16 gms dl",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Cyanmethemoglobin"
- },
- {
-  "test_name": "WBC Count",
-  "unit": "cells cumm",
-  "reference_range": "4000-11000cells cumm",
+  "test_name": "Absolute Band Count",
+  "unit": "/UL",
+  "reference_range": "Adults: 0 - 700 /UL",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -166,14 +189,24 @@
   "method": "Automated"
  },
  {
-  "test_name": "Platelet Count",
-  "unit": "cum",
-  "reference_range": "1.5-4.5 lakhs cum",
+  "test_name": "Absolute Lymphocyte Count",
+  "unit": "%",
+  "reference_range": "Adults 20-40% New born: 25-35% Child<4yrs: 35-65% Child 4-10yrs: 30-50%",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Impedance"
+  "method": "Automated"
+ },
+ {
+  "test_name": "Absolute Eosinophil Count (AEC)",
+  "unit": "cells /cumm",
+  "reference_range": "40 - 440 cells cumm",
+  "category": "Haematology",
+  "panel": "CBC",
+  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Automated Flow Cytometry"
  },
  {
   "test_name": "ESR",
@@ -231,7 +264,8 @@
   "test_name": "Direct Coombs Test",
   "reference_range": "Negative",
   "category": "Tube Method",
-  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY"
+  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY",
+  "method": "DAT"
  },
  {
   "test_name": "Fluid Cell Count",
@@ -289,7 +323,9 @@
   "test_name": "Peripheral Smear Examination",
   "reference_range": "RBC Morphology: Normocytic Normochromic<br>WBC Morphology: Normal<br>Platelets: Adequate",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Leishman Stain",
+  "Column10": " "
  },
  {
   "test_name": "Immature Platelet Fraction (IPF)",
@@ -305,7 +341,8 @@
   "test_name": "Indirect Coombs Test",
   "reference_range": "Negative",
   "category": "Tube Method",
-  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY"
+  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY",
+  "method": "IAT"
  },
  {
   "test_name": "Leucocyte Alkaline Phosphatase (LAP) Score",
@@ -319,19 +356,22 @@
   "test_name": "LE Cell",
   "reference_range": "Negative",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Malaria Parasite (Peripheral Smear)",
   "reference_range": "No malarial parasite seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Giemsa Stain"
  },
  {
   "test_name": "Malaria Antigen (Vivax & Falciparum)",
   "reference_range": "Negative for Plasmodium vivax & Plasmodium falciparum antigen",
   "category": "Rapid Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ICT"
  },
  {
   "test_name": "MCH",
@@ -424,9 +464,9 @@
   "method": "Manual Microscopy"
  },
  {
-  "test_name": "RBC Count",
-  "unit": "cumm",
-  "reference_range": "3.5-55 million cumm",
+  "test_name": "Absolute Neutrophil Count",
+  "unit": "/UL",
+  "reference_range": "Adults: 1500 - 8000 /UL",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -474,25 +514,29 @@
   "test_name": "Sickling Test",
   "reference_range": "Negative",
   "category": "Solubility Test",
-  "department": "DEPARTMENT OF HAEMATOLOGY"
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Sickling Test"
  },
  {
   "test_name": "Microfilaria (Peripheral Smear)",
   "reference_range": "No microfilaria seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Giemsa Stain"
  },
  {
   "test_name": "Ham's Test (PNH Screening)",
   "reference_range": "Negative",
   "category": "Hemolysis Test",
-  "department": "DEPARTMENT OF HAEMATOLOGY"
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Ham's Test"
  },
  {
   "test_name": "Heterophile Antibody",
   "reference_range": "Negative",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Monospot"
  },
  {
   "test_name": "Anti-A Titre",
@@ -514,31 +558,36 @@
   "test_name": "Bence Jones Protein (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Heat Test"
  },
  {
   "test_name": "Bile Pigment",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Fouchet Test"
  },
  {
   "test_name": "Bile Salts",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Hay's Test"
  },
  {
   "test_name": "Urine Color",
   "reference_range": "Pale Yellow to Amber",
   "category": "Physical Exam",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Visual Examination"
  },
  {
   "test_name": "Urine Appearance",
   "reference_range": "Clear",
   "category": "Physical Exam",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Visual Examination"
  },
  {
   "test_name": "Urine Specific Gravity",
@@ -558,19 +607,22 @@
   "test_name": "Urine Protein",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Dipstick"
  },
  {
   "test_name": "Urine Glucose",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Glucose Oxidase"
  },
  {
   "test_name": "Urine Ketone Bodies",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Dipstick"
  },
  {
   "test_name": "Urine Microscopy (RBC)",
@@ -592,19 +644,22 @@
   "test_name": "Chyle (Fluid)",
   "reference_range": "Absent",
   "category": "Visual Exam",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Visual Examination"
  },
  {
   "test_name": "Urine Myoglobin",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Occult Blood (Stool)",
   "reference_range": "Negative",
   "category": "Guaiac Test",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Guaiac Test"
  },
  {
   "test_name": "Fluid pH",
@@ -617,13 +672,15 @@
   "test_name": "Reducing Substances (Stool)",
   "reference_range": "Negative",
   "category": "Benedict Test",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Benedict's Test"
  },
  {
   "test_name": "Reducing Substances (Urine)",
   "reference_range": "Negative",
   "category": "Benedict Test",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Benedict's Test"
  },
  {
   "test_name": "Semen Volume",
@@ -675,68 +732,79 @@
   "test_name": "Stool Examination",
   "reference_range": "No ova, cysts or parasites seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Stool Concentration Method",
   "reference_range": "No ova or cysts detected after concentration",
   "category": "Concentration Technique",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Concentration Method"
  },
  {
   "test_name": "Stool Fat Globules",
   "reference_range": "Absent",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Sudan Stain"
  },
  {
   "test_name": "Stool Microscopy",
   "unit": "/HPF",
   "reference_range": "RBC: 0 - 2 /HPF<br>Pus Cells: 0 - 5 /HPF",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Sudan IV Stain",
   "reference_range": "Negative",
   "category": "Staining",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Sudan IV Stain"
  },
  {
   "test_name": "Urinary Hemoglobin",
   "reference_range": "Negative",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Dipstick"
  },
  {
   "test_name": "Urine Albumin",
   "reference_range": "Negative to Trace",
   "category": "Dipstick",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Dipstick"
  },
  {
   "test_name": "Urine Chyle",
   "reference_range": "Absent",
   "category": "Visual Exam",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Visual Examination"
  },
  {
   "test_name": "Urine Eosinophils",
   "reference_range": "0 - 1 /HPF",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Hansel Stain"
  },
  {
   "test_name": "Urine Fat Globules",
   "reference_range": "Absent",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Sudan Stain"
  },
  {
   "test_name": "Urine Hemosiderin",
   "reference_range": "Negative",
   "category": "Staining",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Perls Stain"
  },
  {
   "test_name": "Urobilinogen (Urine)",
@@ -750,994 +818,1159 @@
   "test_name": "AFB Stain (ZN) - ET Secretion",
   "reference_range": "AFB Not Seen",
   "category": "ZN Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Sputum (3 Samples)",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Sputum (Single Sample)",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - BAL",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - CSF",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Guided Aspirate",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Pericardial Fluid",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Pleural Fluid",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Pus",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Sputum",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Sputum (Concentration Method)",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Synovial Fluid",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Tissue",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Urine",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Ascitic Fluid",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB Stain (ZN) - Miscellaneous",
   "reference_range": "AFB Not Seen",
   "category": "Ziehl-Neelsen Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ZN Stain"
  },
  {
   "test_name": "AFB MTB Antibiogram Panel (1st & 2nd Line - 10 Drugs)",
   "reference_range": "Sensitive / Resistant pattern for tested drugs",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "LPA"
  },
  {
   "test_name": "AFB MTB Antibiogram Panel (1st Line - 4 Drugs SIRE)",
   "reference_range": "Sensitive / Resistant pattern for SIRE drugs",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "LPA"
  },
  {
   "test_name": "AFB Culture (LJ) - Urine",
   "reference_range": "No Growth after 8 weeks",
   "category": "LUwenstein-Jensen Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "LJ Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Tissue",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - BAL",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Body Fluid",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - CSF",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - ET Secretion",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Miscellaneous",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Pleural Fluid",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Pus",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB Culture (MGIT) - Sputum",
   "reference_range": "No Growth",
   "category": "MGIT Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "MGIT Culture"
  },
  {
   "test_name": "AFB XDR Screen (Line Probe Assay)",
   "reference_range": "MTB Not Detected / Resistance Not Detected",
   "category": "Molecular (LPA)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "LPA"
  },
  {
   "test_name": "Albert Stain",
   "reference_range": "Corynebacterium diphtheriae: Green bacilli with metachromatic granules",
   "category": "Albert Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Albert Stain"
  },
  {
   "test_name": "Anaerobic Culture & Identification - Blood",
   "reference_range": "No Anaerobic Growth",
   "category": "Anaerobic Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Anaerobic Culture"
  },
  {
   "test_name": "Anaerobic Culture & Identification - Body Fluid",
   "reference_range": "No Anaerobic Growth",
   "category": "Anaerobic Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Anaerobic Culture"
  },
  {
   "test_name": "Bacteriological Examination of Water",
   "reference_range": "No Coliforms Isolated",
   "category": "Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture"
  },
  {
   "test_name": "Biological Indicator",
   "reference_range": "Pass",
   "category": "Sterility Testing",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Biological Indicator"
  },
  {
   "test_name": "Candida Species Identification",
   "reference_range": "Candida species identified",
   "category": "Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "ID System"
  },
  {
   "test_name": "Candida Species Susceptibility Testing",
   "reference_range": "Sensitive / Resistant pattern for antifungals",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "AST"
  },
  {
   "test_name": "Cryptosporidium/Isospora Identification (Stool)",
   "reference_range": "Oocysts Not Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Modified Acid Fast Stain"
  },
  {
   "test_name": "Cryptosporidium Antigen (Stool)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Culture & Sensitivity - Ascitic Fluid",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Central Line Tip",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Pericardial Fluid",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Tracheal Secretion",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Pus",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Synovial Fluid",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Body Fluid",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Eye Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Guided Aspirate",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Vaginal Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Blood (Manual)",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Manual Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Blood (Automated)",
   "reference_range": "No Growth",
   "category": "Automated Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Automated Blood Culture"
  },
  {
   "test_name": "Culture & Sensitivity - CSF",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Ear Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Miscellaneous",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Nasal Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Pleural Fluid",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Pus (Automated)",
   "reference_range": "No Growth",
   "category": "Automated Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Automated Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Semen",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Sputum",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Stool",
   "reference_range": "No Enteric Pathogens Isolated",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Throat Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Tissue",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Urethral Swab",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Urine (Automated)",
   "reference_range": "No Growth",
   "category": "Automated Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Automated Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Urine",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Sputum (Automated)",
   "reference_range": "No Growth",
   "category": "Automated Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Automated Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Urine (22 Drugs Manual)",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Manual Culture & Sensitivity"
  },
  {
   "test_name": "Culture & Sensitivity - Miscellaneous (Manual)",
   "reference_range": "No Growth",
   "category": "Culture & Sensitivity",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Manual Culture & Sensitivity"
  },
  {
   "test_name": "Dialysis Water Culture",
   "reference_range": "No Growth",
   "category": "Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Culture"
  },
  {
   "test_name": "Environmental Surveillance - Surface Swabs",
   "reference_range": "No Growth",
   "category": "Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Surface Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Urine",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Blood",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Body Fluid",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Nail",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Skin",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Sputum",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Hair",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Miscellaneous",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Pus",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Tissue",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Swab",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "Fungal Culture & Identification - Bronchial Wash",
   "reference_range": "No Fungal Growth",
   "category": "Fungal Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Fungal Culture"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - Sputum",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - BAL",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - Body Fluid",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - Pus",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - Tissue",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB with Rifampicin - Urine",
   "reference_range": "MTB Not Detected / Rifampicin Resistance Not Detected",
   "category": "PCR (CBNAAT)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "CBNAAT"
  },
  {
   "test_name": "GeneXpert MTB/XDR",
   "reference_range": "MTB Resistance Markers Not Detected",
   "category": "Molecular (PCR)",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "GeneXpert XDR"
  },
  {
   "test_name": "Gram Stain - Ascitic Fluid",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - BAL",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - CSF",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - ET Secretion",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Guided Aspirate",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Miscellaneous",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Pericardial Fluid",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Peritoneal Fluid",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Pleural Fluid",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Pus",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Semen",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Sputum",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Stool",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Synovial Fluid",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Throat Swab",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Tissue",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Vaginal Swab",
   "reference_range": "Normal Vaginal Flora Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Gram Stain - Wound Swab",
   "reference_range": "No Organisms Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Hanging Drop (Stool Examination)",
   "reference_range": "No Motile Organisms Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Hanging Drop"
  },
  {
   "test_name": "India Ink Preparation (Cryptococcus)",
   "reference_range": "Negative for Cryptococcus",
   "category": "India Ink Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "India Ink"
  },
  {
   "test_name": "KOH Examination - BAL",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Body Fluid",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - CSF",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Hair",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Miscellaneous",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Nail",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Pus",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Skin Scrapings",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Urine",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Sputum",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - Tissue",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "KOH Examination - ET Secretion",
   "reference_range": "No Fungal Elements Seen",
   "category": "KOH Mount",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "KOH Mount"
  },
  {
   "test_name": "Modified AFB Stain (Isospora/Cryptosporidium)",
   "reference_range": "Oocysts Not Seen",
   "category": "ZN Modified Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Modified AFB Stain"
  },
  {
   "test_name": "OT Swab - Aerobic Culture",
   "reference_range": "No Growth",
   "category": "Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Aerobic Culture"
  },
  {
   "test_name": "OT Swab - Anaerobic Culture",
   "reference_range": "No Anaerobic Growth",
   "category": "Anaerobic Culture",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Anaerobic Culture"
  },
  {
   "test_name": "PCP Stain",
   "reference_range": "Pneumocystis jirovecii Not Seen",
   "category": "Special Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "GMS Stain"
  },
  {
   "test_name": "Slit Skin Smear Examination",
   "reference_range": "AFB Not Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Slit Skin Smear"
  },
  {
   "test_name": "Smear for Gonococci (Slide)",
   "reference_range": "No Intracellular Gram Negative Diplococci Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Smear for Gonococci (Urethral Swab)",
   "reference_range": "No Intracellular Gram Negative Diplococci Seen",
   "category": "Gram Stain",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Gram Stain"
  },
  {
   "test_name": "Stool for Microsporidium",
   "reference_range": "Microsporidia Not Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Modified Trichrome Stain"
  },
  {
   "test_name": "Stool for Rotavirus",
   "reference_range": "Negative",
   "category": "Rapid Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Adenovirus IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Adenovirus IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Allergy Asthma Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Comprehensive Panel (Adults)",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Comprehensive Panel (Pediatric)",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Drug Panel (12 Drugs)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Drug Panel (7 Drugs)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Food Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Inhalation Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Non-Veg Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Vegetarian Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Allergy Dust Panel",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Amoebic Serology (IgG/IgM)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "ANA (Anti-Nuclear Antibodies)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ANA (IFA)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ANA (EIA)",
   "reference_range": "Negative",
   "category": "EIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "EIA"
  },
  {
   "test_name": "ANA Profile",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoblot"
  },
  {
   "test_name": "ANCA (C)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ANCA (P)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ANCA (P) - IFA",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ANCA (C) - IFA",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Anti PLA2 Receptor Antibody",
   "unit": "RU/mL",
   "reference_range": "Negative: <20 RU/mL",
   "category": "EIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti CCP Antibody",
   "unit": "U/mL",
   "reference_range": "Negative: <20 U/mL",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Anti dsDNA Antibody (IFA)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Anti dsDNA Antibody (EIA)",
   "unit": "IU/mL",
   "reference_range": "Negative: <100 IU/mL",
   "category": "EIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "EIA"
  },
  {
   "test_name": "Anti Mitochondrial Antibody (AMA)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Anti MOG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "Anti MuSK Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti NMO (Aquaporin-4 Antibody)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "Anti Saccharomyces cerevisiae IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti Striated Muscle Antibody (ASKA)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Anti-Gliadin IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Gliadin IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti Saccharomyces cerevisiae IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti Ovarian Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ASMA (Anti Smooth Muscle Antibody)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "ASO Titre",
@@ -1759,62 +1992,72 @@
   "test_name": "Aspergillus IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Aspergillus IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Aspergillus fumigatus Specific IgE",
   "unit": "kUA/L",
   "reference_range": "Negative: <0.35 kUA/L",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ImmunoCAP"
  },
  {
   "test_name": "Aspergillus fumigatus Specific IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Autoimmune Encephalitis Panel",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Bacterial Meningitis Screen",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Multiplex PCR"
  },
  {
   "test_name": "Basal Ganglion Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Bordetella pertussis IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Brucella IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Brucella IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "C-Reactive Protein (CRP)",
@@ -1836,291 +2079,339 @@
   "test_name": "Centromere Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Chikungunya IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chikungunya IgG Antibody (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Chikungunya IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chikungunya IgM Antibody (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Chlamydia pneumoniae IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chlamydia pneumoniae IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chlamydia pneumoniae IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chlamydia trachomatis IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chlamydia trachomatis IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Chlamydia trachomatis IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Clostridium difficile GDH + Toxin A/B",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Clostridium difficile Toxin A/B (Stool)",
   "reference_range": "Negative",
   "category": "PCR",
-  "department": "DEPARTMENT OF MOLECULAR BIOLOGY"
+  "department": "DEPARTMENT OF MOLECULAR BIOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "CMV IgG Avidity",
   "reference_range": "High Avidity: Past Infection",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "CMV IgG (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "CMV IgG (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "CMV IgM (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "CMV IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "CMV IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Cold Agglutinin",
   "reference_range": "Negative",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Agglutination"
  },
  {
   "test_name": "COVID-19 Neutralizing Antibody",
   "unit": "%",
   "reference_range": "Positive: ≥30% Inhibition",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Coxsackie IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Coxsackie IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Cryptococcus Antigen (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Latex Agglutination"
  },
  {
   "test_name": "Cryptococcus Antigen (Serum)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Latex Agglutination"
  },
  {
   "test_name": "HSV 1 & 2 IgG (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HSV 1 & 2 IgM (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Cysticercus (Taenia solium) IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Cysticercus (Taenia solium) IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Dengue IgG & IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Dengue IgG & IgM (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Dengue IgG (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Dengue IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Dengue NS1 Antigen (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Dengue NS1 Antigen (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Dengue NS1/IgG/IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Desmoglein 3 Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Desmoglein 1 Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Diphtheria IgG Antibody",
   "unit": "IU/mL",
   "reference_range": "Protective: >0.1 IU/mL",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "EBV Early Antigen (EA-D) IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "EBV Nuclear Antigen (EBNA) IgG",
   "reference_range": "Positive: Past Infection",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "EBV Nuclear Antigen (EBNA) IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Echinococcus IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Endomysial Antibody IgA",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Endomysial Antibody IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Entamoeba histolytica IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "EBV VCA IgG",
   "reference_range": "Positive: Past Infection",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "EBV VCA IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Fecal Elastase",
@@ -2128,205 +2419,238 @@
   "reference_range": "Normal: >200 µg/g stool",
   "category": "Biochemistry",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "ELISA"
+  "method": "CLIA"
  },
  {
   "test_name": "Filaria Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Filaria Antigen",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ICT"
  },
  {
   "test_name": "FTA-ABS",
   "reference_range": "Negative",
   "category": "Immunofluorescence",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "FTA-ABS"
  },
  {
   "test_name": "Food Intolerance Test",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Food Intolerance Test (IgG Based)",
   "reference_range": "Negative / Within Normal Limits",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Galactomannan Aspergillus Antigen",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Ganglioside Antibody IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Ganglioside Antibody IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Giardia Antigen (Stool)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "GBM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "H. pylori Antigen (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Hantavirus IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HBsAg (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "HCV Antigen (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "HCV IgG (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HCV IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HCV Antibodies (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "H. pylori IgA Antibody",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "H. pylori IgG Antibody",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "H. pylori IgM Antibody",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HAV IgM (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HAV IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HAV Total Antibody",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HAV IgG Antibody",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Anti-HBe Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBsAg (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBsAg (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HBc IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBc IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBc IgM (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBc Total Antibody",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBeAg (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HBeAg (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-HBs Antibody (CLIA)",
@@ -2348,211 +2672,246 @@
   "test_name": "HCV Antibodies (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HDV Total Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HDV IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HEV IgG (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HEV IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Histone Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HIV Western Blot",
   "reference_range": "Negative",
   "category": "Western Blot",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Western Blot"
  },
  {
   "test_name": "HIV 1 & 2 Antibodies (CLIA)",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HIV 1 & 2 Antibodies (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "HIV 1 & 2 Antibody (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "HIV P24 Antigen",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 1 & 2 IgG",
   "reference_range": "Positive / Reactive",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 1 IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 1 IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 1 & 2 IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 1 & 2 IgG/IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 2 IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HSV 2 IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "HTLV 1 & 2 Antibody",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "tTG/DGP Screen",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Infliximab Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Influenza A & B IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Intrinsic Factor Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "LC-1 Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Legionella pneumophila IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Legionella pneumophila IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Legionella Antigen (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ICT"
  },
  {
   "test_name": "Leishmania Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Leptospira IgG (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Leptospira IgG (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Leptospira IgM (ELISA)",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Leptospira IgM (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "LKM-1 Antibody",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Lyme Borrelia IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Lyme Borrelia IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Mantoux Test",
@@ -2566,91 +2925,106 @@
   "test_name": "Measles IgG (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Measles IgM Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Measles IgG Antibody",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Monospot Test",
   "reference_range": "Negative",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Monospot"
  },
  {
   "test_name": "Mumps IgG Antibody",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Mumps IgM Antibody",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Mycoplasma pneumoniae IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Mycoplasma pneumoniae IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Myositis Profile",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoblot"
  },
  {
   "test_name": "Paraneoplastic Autoantibody Profile I",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoblot"
  },
  {
   "test_name": "Paraneoplastic Autoantibody Profile III",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoblot"
  },
  {
   "test_name": "NMDA Receptor Antibody (Serum)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "NMDA Receptor Antibody (CSF)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "NMO with MOG Antibodies (CSF)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "NMO with MOG Antibodies (Serum)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "Neuron Specific Enolase (NSE)",
@@ -2664,19 +3038,22 @@
   "test_name": "Parietal Cell Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Parvovirus B19 IgG",
   "reference_range": "Positive: Past Exposure",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Parvovirus B19 IgM",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Procalcitonin",
@@ -2691,7 +3068,8 @@
   "unit": "IU/mL",
   "reference_range": "Protective: >0.5 IU/mL",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Rheumatoid Factor (RF)",
@@ -2705,110 +3083,128 @@
   "test_name": "Rheumatoid Factor IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "RNP IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Rubella IgG & IgM",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Rubella IgG",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Rubella IgM",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Rubella IgG Avidity",
   "reference_range": "High Avidity: Past Infection",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "SARS-CoV-2 Spike Protein Antibody",
   "reference_range": "Positive / Reactive",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Scl-70 IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Scrub Typhus IgG",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Scrub Typhus IgM",
   "reference_range": "Negative",
   "category": "ELISA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Scrub Typhus (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "SLA (Soluble Liver Antigen) Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Smith (Sm) Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "SS-A (Ro) IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "SS-B (La) IgG Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Syphilis Antibodies (Treponemal Total)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TB Gold Quantiferon",
   "reference_range": "Negative",
   "category": "IGRA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IGRA"
  },
  {
   "test_name": "Tetanus IgG",
   "unit": "IU/mL",
   "reference_range": "Protective: >0.1 IU/mL",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "TNF Alpha",
@@ -2822,73 +3218,85 @@
   "test_name": "TORCH Panel (IgG/IgM)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH with Avidity",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH 10 Panel",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH 5 IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH 5 IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH Profile IgG",
   "reference_range": "Positive: Past Exposure",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TORCH Profile IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Toxoplasma Avidity",
   "reference_range": "High Avidity: Past Infection",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Toxoplasma IgG & IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Toxoplasma IgG",
   "reference_range": "Positive: Past Exposure",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Toxoplasma IgM",
   "reference_range": "Negative",
   "category": "CLIA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "TPHA",
   "reference_range": "Negative",
   "category": "Hemagglutination",
-  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY"
+  "department": "DEPARTMENT OF IMMUNOHEMATOLOGY",
+  "method": "TPHA"
  },
  {
   "test_name": "TPHA Titre",
@@ -2902,37 +3310,43 @@
   "test_name": "tTG IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Typhi IgG & IgM (Rapid)",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "Typhidot IgM",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Rapid ICT"
  },
  {
   "test_name": "U1-snRNP Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Varicella Zoster IgG",
   "reference_range": "Positive: Immunity / Past Exposure",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Varicella Zoster IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "VDRL/RPR Titre",
@@ -2946,31 +3360,36 @@
   "test_name": "VGKC Antibody (Serum)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "VGKC Antibody (CSF)",
   "reference_range": "Negative",
   "category": "IFA",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CBA"
  },
  {
   "test_name": "Weil-Felix Test",
   "reference_range": "Negative",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Agglutination"
  },
  {
   "test_name": "Widal Test (Slide)",
   "reference_range": "Negative",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Slide Agglutination"
  },
  {
   "test_name": "Widal Test (Tube)",
   "reference_range": "TO <1:80<br>TH <1:80<br>AH <1:80<br>BH <1:80",
   "category": "Agglutination",
-  "department": "DEPARTMENT OF SEROLOGY"
+  "department": "DEPARTMENT OF SEROLOGY",
+  "method": "Tube Agglutination"
  },
  {
   "test_name": "Antithrombin III Antigen",
@@ -2992,7 +3411,8 @@
   "test_name": "APCR Test",
   "reference_range": "Negative",
   "category": "Functional Assay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Coagulation Assay"
  },
  {
   "test_name": "APTT",
@@ -3009,7 +3429,8 @@
   "category": "Panel",
   "panel": "COAGULATION",
   "panel_display": "COAGULATION PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "PT"
  },
  {
   "test_name": "INR",
@@ -3017,7 +3438,8 @@
   "category": "Panel",
   "panel": "COAGULATION",
   "panel_display": "COAGULATION PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "INR Calculation"
  },
  {
   "test_name": "Activated Partial Thromboplastin Time (APTT)",
@@ -3026,7 +3448,8 @@
   "category": "Panel",
   "panel": "COAGULATION",
   "panel_display": "COAGULATION PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "APTT"
  },
  {
   "test_name": "Bleeding Time (BT)",
@@ -3035,7 +3458,8 @@
   "category": "Panel",
   "panel": "COAGULATION",
   "panel_display": "COAGULATION PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Ivy Method"
  },
  {
   "test_name": "Clotting Time (CT)",
@@ -3044,7 +3468,8 @@
   "category": "Panel",
   "panel": "COAGULATION",
   "panel_display": "COAGULATION PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Lee-White Method"
  },
  {
   "test_name": "D-Dimer",
@@ -3082,7 +3507,8 @@
   "test_name": "Factor XIII (Clot Solubility Test)",
   "reference_range": "Clot Stable after 24 hours",
   "category": "Functional Test",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Clot Solubility Test"
  },
  {
   "test_name": "Factor V Level",
@@ -3096,7 +3522,8 @@
   "test_name": "Factor V Leiden Mutation",
   "reference_range": "Negative",
   "category": "PCR",
-  "department": "DEPARTMENT OF MOLECULAR BIOLOGY"
+  "department": "DEPARTMENT OF MOLECULAR BIOLOGY",
+  "method": "PCR"
  },
  {
   "test_name": "Factor VII Activity",
@@ -3142,19 +3569,22 @@
   "test_name": "HPLC Hemoglobinopathy",
   "reference_range": "No Abnormal Hemoglobin Detected",
   "category": "HPLC",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "HPLC"
  },
  {
   "test_name": "Lupus Anticoagulant (dRVVT)",
   "reference_range": "Negative",
   "category": "Clotting Assay",
-  "department": "DEPARTMENT OF HAEMATOLOGY"
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "dRVVT"
  },
  {
   "test_name": "Mixing Study (APTT)",
   "reference_range": "Correction Indicates Factor Deficiency",
   "category": "Clotting Assay",
-  "department": "DEPARTMENT OF HAEMATOLOGY"
+  "department": "DEPARTMENT OF HAEMATOLOGY",
+  "method": "Mixing Study"
  },
  {
   "test_name": "Protein C Activity",
@@ -3200,7 +3630,8 @@
   "test_name": "Fluid Cytology",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Fluid TLC",
@@ -3208,104 +3639,120 @@
   "reference_range": "0 - 500 cells/µL",
   "category": "Body Fluid",
   "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
-  "method": "Manual"
+  "method": "Cell Count"
  },
  {
   "test_name": "FNAC (Sample Collection)",
   "reference_range": "Adequate Sample Collected",
   "category": "Aspiration",
-  "department": "DEPARTMENT OF CYTOPATHOLOGY"
+  "department": "DEPARTMENT OF CYTOPATHOLOGY",
+  "method": "FNAC"
  },
  {
   "test_name": "FNAC Reporting",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "LBC Pap with HPV Reflex",
   "reference_range": "Negative for High Risk HPV",
   "category": "LBC",
-  "department": "DEPARTMENT OF CYTOPATHOLOGY"
+  "department": "DEPARTMENT OF CYTOPATHOLOGY",
+  "method": "LBC"
  },
  {
   "test_name": "Liquid Based Cytology (Pap Smear)",
   "reference_range": "Negative for Intraepithelial Lesion or Malignancy",
   "category": "LBC",
-  "department": "DEPARTMENT OF CYTOPATHOLOGY"
+  "department": "DEPARTMENT OF CYTOPATHOLOGY",
+  "method": "LBC"
  },
  {
   "test_name": "LBC Reporting",
   "reference_range": "Negative for Intraepithelial Lesion or Malignancy",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Miscellaneous Fluid Examination",
   "reference_range": "No Abnormal Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Nasal Smear",
   "unit": "%",
   "reference_range": "Eosinophils: <10%",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Pap Smear",
   "reference_range": "Negative for Intraepithelial Lesion or Malignancy",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Pap Stain"
  },
  {
   "test_name": "Prostatic Fluid Examination",
   "reference_range": "No Abnormal Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Pus Cytology",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Scrapings Cytology",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Skin Smear for Herpes",
   "reference_range": "Negative for Herpes Simplex Virus",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Tzanck Smear"
  },
  {
   "test_name": "Slide Reporting",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Smear for Malignant Cells",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Special Stain (Cytology)",
   "reference_range": "Special Stain Negative",
   "category": "Staining",
-  "department": "DEPARTMENT OF MICROBIOLOGY"
+  "department": "DEPARTMENT OF MICROBIOLOGY",
+  "method": "Special Stain"
  },
  {
   "test_name": "Sputum Cytology",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "Synovial Fluid Cell Count",
@@ -3327,13 +3774,15 @@
   "test_name": "Urethral Smear Examination",
   "reference_range": "No Pathogenic Organisms Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Microscopy"
  },
  {
   "test_name": "Urine Cytology",
   "reference_range": "No Malignant Cells Seen",
   "category": "Microscopy",
-  "department": "DEPARTMENT OF CLINICAL PATHOLOGY"
+  "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
+  "method": "Cytology"
  },
  {
   "test_name": "1,25 Dihydroxy Vitamin D",
@@ -3418,7 +3867,8 @@
   "test_name": "Acetylcholine Receptor Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Acid Phosphatase (Prostatic)",
@@ -3440,19 +3890,22 @@
   "test_name": "Anti-Cardiolipin IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Cardiolipin IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Cardiolipin IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "ACTH",
@@ -3466,7 +3919,8 @@
   "test_name": "ACTH Stimulation Test (17-OH Progesterone)",
   "reference_range": "Baseline and stimulated values vary with protocol",
   "category": "Functional Test",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA"
  },
  {
   "test_name": "Adenosine Deaminase (ADA)",
@@ -3560,7 +4014,8 @@
   "test_name": "Ethyl Glucuronide & Ethyl Sulfate",
   "reference_range": "Negative",
   "category": "LC-MS/MS",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "LC-MS/MS"
  },
  {
   "test_name": "Aldolase",
@@ -3581,7 +4036,8 @@
   "test_name": "ALP Isoenzymes",
   "reference_range": "Liver Isoenzyme Predominance",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "Alkaline Phosphatase (ALP)",
@@ -3653,7 +4109,8 @@
   "test_name": "Amphetamines",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Amylase (Urine)",
@@ -3691,13 +4148,15 @@
   "test_name": "Anti-Cardiolipin Panel",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-IA2 Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Islet Cell Antibody (ICA)",
@@ -3705,7 +4164,8 @@
   "category": "Panel",
   "panel": "DIABETIC AUTOIMMUNE",
   "panel_display": "DIABETIC AUTOIMMUNE PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "IFA"
  },
  {
   "test_name": "Insulin Autoantibody (IAA)",
@@ -3714,7 +4174,8 @@
   "category": "Panel",
   "panel": "DIABETIC AUTOIMMUNE",
   "panel_display": "DIABETIC AUTOIMMUNE PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ELISA"
  },
  {
   "test_name": "GAD Antibody (GADA)",
@@ -3723,7 +4184,8 @@
   "category": "Panel",
   "panel": "DIABETIC AUTOIMMUNE",
   "panel_display": "DIABETIC AUTOIMMUNE PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ELISA"
  },
  {
   "test_name": "IA-2 Antibody",
@@ -3732,37 +4194,43 @@
   "category": "Panel",
   "panel": "DIABETIC AUTOIMMUNE",
   "panel_display": "DIABETIC AUTOIMMUNE PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Phospholipid Antibody Panel",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Phospholipid IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Phospholipid IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Phospholipid IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Anti-Thyroid Antibodies (TPO & Tg)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "CLIA"
  },
  {
   "test_name": "Anti-TPO Antibody",
@@ -3800,7 +4268,8 @@
   "test_name": "Anti-Sperm Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Ascitic Fluid Amylase",
@@ -3822,37 +4291,43 @@
   "test_name": "Barbiturates (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Benzodiazepines (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Beta-2 Glycoprotein Antibody (IgG/IgM)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Beta-2 Glycoprotein IgA",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Beta-2 Glycoprotein IgG",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Beta-2 Glycoprotein IgM",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Beta-2 Microglobulin (Serum)",
@@ -3946,50 +4421,58 @@
   "test_name": "Biochemical Analysis - Ascitic Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - BAL Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - Body Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - Bronchoscopy Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - CSF",
   "unit": "mg/dL",
   "reference_range": "CSF Protein: 15 - 45 mg/dL<br>CSF Glucose: 45 - 80 mg/dL",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - Pericardial Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - Peritoneal Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Biochemical Analysis - Pleural Fluid",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Blood Urea Nitrogen (BUN)",
@@ -4115,7 +4598,8 @@
   "test_name": "Cannabis (THC)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Carbamazepine Level",
@@ -4259,7 +4743,8 @@
   "test_name": "Cocaine Metabolites",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Complement C3",
@@ -4401,13 +4886,15 @@
   "test_name": "Cryoglobulins",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Precipitation Test"
  },
  {
   "test_name": "CSF Oligoclonal Bands",
   "reference_range": "Absent",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "IEF"
  },
  {
   "test_name": "Cyclosporine Level",
@@ -4477,19 +4964,22 @@
   "test_name": "Drug Abuse Test (Urine - 5 Drugs)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Drug Abuse Test (Urine - 10 Drugs)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Drug Abuse Panel (12 Drugs)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "eGFR (MDRD)",
@@ -4603,7 +5093,8 @@
   "test_name": "Fluid Biochemical Analysis",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "Fluid Lipase",
@@ -4700,7 +5191,8 @@
   "test_name": "GAD-65 Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Gastrin",
@@ -4754,7 +5246,8 @@
   "test_name": "Growth Hormone Stimulation Test",
   "reference_range": "Peak GH: >10 ng/mL",
   "category": "Functional Test",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA"
  },
  {
   "test_name": "Haptoglobin",
@@ -4768,13 +5261,15 @@
   "test_name": "Haptoglobin Genotype",
   "reference_range": "Normal Genotype",
   "category": "PCR",
-  "department": "DEPARTMENT OF MOLECULAR BIOLOGY"
+  "department": "DEPARTMENT OF MOLECULAR BIOLOGY",
+  "method": "PCR"
  },
  {
   "test_name": "Hb Electrophoresis",
   "reference_range": "HbA: 95 - 98%<br>HbA2: 2 - 3.5%<br>HbF: <2%",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "HbA1c",
@@ -4884,13 +5379,15 @@
   "test_name": "Immunofixation (Urine)",
   "reference_range": "No Monoclonal Band Detected",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Immunofixation"
  },
  {
   "test_name": "Immunofixation (Serum)",
   "reference_range": "No Monoclonal Band Detected",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Immunofixation"
  },
  {
   "test_name": "Immunoglobulin IgA",
@@ -4984,7 +5481,8 @@
   "test_name": "Insulin Autoantibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "ELISA"
  },
  {
   "test_name": "Free Insulin",
@@ -5033,7 +5531,8 @@
   "category": "Panel",
   "panel": "IRON PROFILE",
   "panel_display": "IRON PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Ferrozine"
  },
  {
   "test_name": "Unsaturated Iron Binding Capacity (UIBC)",
@@ -5042,7 +5541,8 @@
   "category": "Panel",
   "panel": "IRON PROFILE",
   "panel_display": "IRON PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Ferrozine"
  },
  {
   "test_name": "Transferrin Saturation",
@@ -5051,13 +5551,15 @@
   "category": "Panel",
   "panel": "IRON PROFILE",
   "panel_display": "IRON PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "Islet Cell Antibody",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "IFA"
  },
  {
   "test_name": "Kappa/Lambda Free Light Chains (Serum)",
@@ -5127,7 +5629,8 @@
   "test_name": "LDH Isoenzymes",
   "reference_range": "LD1: 17 - 27%<br>LD2: 27 - 37%<br>LD3: 18 - 25%<br>LD4: 3 - 8%<br>LD5: 0 - 5%",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "LDH (Serum)",
@@ -5210,7 +5713,8 @@
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CHOD-PAP"
  },
  {
   "test_name": "Triglycerides",
@@ -5219,7 +5723,8 @@
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "GPO-PAP"
  },
  {
   "test_name": "VLDL Cholesterol",
@@ -5228,16 +5733,8 @@
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
- },
- {
-  "test_name": "Non-HDL Cholesterol",
-  "unit": "mg/dL",
-  "reference_range": "Optimal: <130 mg/dL",
-  "category": "Panel",
-  "panel": "LIPID",
-  "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "Total Cholesterol/HDL Ratio",
@@ -5245,15 +5742,8 @@
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
- },
- {
-  "test_name": "LDL/HDL Ratio",
-  "reference_range": "Ideal: <3.5",
-  "category": "Panel",
-  "panel": "LIPID",
-  "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "Lipoprotein (a)",
@@ -5267,7 +5757,8 @@
   "test_name": "Lipoprotein Electrophoresis",
   "reference_range": "Normal Lipoprotein Pattern",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "Bilirubin Total",
@@ -5276,7 +5767,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Diazo Method"
  },
  {
   "test_name": "Bilirubin Direct",
@@ -5285,7 +5777,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Diazo Method"
  },
  {
   "test_name": "Bilirubin Indirect",
@@ -5294,7 +5787,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "SGOT (AST)",
@@ -5303,7 +5797,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "IFCC"
  },
  {
   "test_name": "SGPT (ALT)",
@@ -5312,7 +5807,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "IFCC"
  },
  {
   "test_name": "Gamma GT (GGT)",
@@ -5321,7 +5817,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "IFCC"
  },
  {
   "test_name": "Total Protein",
@@ -5330,7 +5827,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biuret"
  },
  {
   "test_name": "Albumin",
@@ -5339,7 +5837,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "BCG"
  },
  {
   "test_name": "Globulin",
@@ -5348,7 +5847,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "A/G Ratio",
@@ -5356,7 +5856,8 @@
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "Magnesium",
@@ -5442,7 +5943,8 @@
   "test_name": "Methadone (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Methemoglobin",
@@ -5918,24 +6420,6 @@
   "department": "DEPARTMENT OF BIOCHEMISTRY"
  },
  {
-  "test_name": "Calcium",
-  "unit": "mg/dL",
-  "reference_range": "Adults: 8.5 - 10.5 mg/dL",
-  "category": "Panel",
-  "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
- },
- {
-  "test_name": "Phosphorus",
-  "unit": "mg/dL",
-  "reference_range": "Adults: 2.5 - 4.5 mg/dL",
-  "category": "Panel",
-  "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
- },
- {
   "test_name": "Selenium (Urine Spot)",
   "unit": "Ug/L",
   "reference_range": "Adults: <50 µg/L",
@@ -6293,16 +6777,6 @@
   "reference_range": "Normal: <14 pg/mL",
   "category": "Cardiac Marker",
   "department": "DEPARTMENT OF CARDIOLOGY",
-  "method": "CLIA"
- },
- {
-  "test_name": "TSH",
-  "unit": "UIU/mL",
-  "reference_range": "Adults: 0.4 - 4.0 µIU/mL",
-  "category": "Endocrinology",
-  "panel": "THYROID",
-  "panel_display": "THYROID PROFILE",
-  "department": "DEPARTMENT OF ENDOCRINOLOGY",
   "method": "CLIA"
  },
  {
@@ -6808,5 +7282,30 @@
   "category": "Immunology",
   "department": "DEPARTMENT OF IMMUNOLOGY",
   "method": "Flow Cytometry"
+ },
+ {
+  "test_name": "Serum Calcium",
+  "unit": "mg/dL",
+  "reference_range": "Premature: 7.6–10.0; 2–12 Months: 8.4–10.8; 1–4 Years: 8.4–10.4; 5–20 Years: 9.2–11.0; 21–50 Years: 8.8–10.2; >50 Years: 8.4–9.7",
+  "category": "Biochemistry",
+  "panel": "Electrolyte Profile",
+  "panel_display": "Serum Calcium",
+  "department": "Biochemistry",
+  "method": "Arsenazo III Method"
+ },
+ {
+  "test_name": "PPBS (Post Prandial Blood Sugar)",
+  "unit": "mg/dL",
+  "reference_range": "Normal: <140; Prediabetes: 140–199; Diabetes: ≥200",
+  "category": "Biochemistry",
+  "panel": "Diabetes Profile",
+  "panel_display": "PPBS",
+  "department": "Biochemistry",
+  "method": "Hexokinase Method"
+ },
+ {
+  "test_name": "Traceable NGSP/DCCT MBG",
+  "unit": "mg/dL"
  }
+
 ]
