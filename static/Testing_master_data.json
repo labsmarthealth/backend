@@ -1,5 +1,4 @@
 [
-    
  {
   "test_name": "Hemoglobin",
   "unit": "gms/dL",
@@ -8,7 +7,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Cyanmethemoglobin"
+  "method": "Cyanmethemoglobin",
+  "display_order": 1
  },
  {
   "test_name": "WBC Count",
@@ -18,7 +18,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 2
  },
  {
   "test_name": "Lymphocytes",
@@ -28,7 +29,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated Flow Cytometry"
+  "method": "Automated Flow Cytometry",
+  "display_order": 4
  },
  {
   "test_name": "Basophil",
@@ -38,7 +40,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 7
  },
  {
   "test_name": "Eosinophil",
@@ -48,7 +51,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 5
  },
  {
   "test_name": "Monocyte",
@@ -58,7 +62,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 6
  },
  {
   "test_name": "ESR",
@@ -68,7 +73,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Westergren Method"
+  "method": "Westergren Method",
+  "display_order": 8
  },
  {
   "test_name": "RBC Count",
@@ -78,7 +84,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 9
  },
  {
   "test_name": "Platelet Count",
@@ -88,7 +95,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Impedance"
+  "method": "Impedance",
+  "display_order": 10
  },
  {
   "test_name": "Absolute Reticulocyte Count",
@@ -136,6 +144,7 @@
  },
  {
   "test_name": "Blood Group ABO & Rh Typing",
+  "unit": "NA",
   "reference_range": "A, B, AB, O with Rh Positive/Negative",
   "category": "Immunohematology",
   "department": "DEPARTMENT OF IMMUNOHEMATOLOGY",
@@ -143,6 +152,7 @@
  },
  {
   "test_name": "Bone Marrow Aspiration",
+  "unit": "NA",
   "reference_range": "Cellularity, M:E Ratio and morphology vary with age and clinical condition",
   "category": "Microscopy",
   "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
@@ -150,6 +160,7 @@
  },
  {
   "test_name": "Bone Marrow Aspiration & Smear Examination",
+  "unit": "NA",
   "reference_range": "Normal marrow cellularity: 30 - 70% depending on age",
   "category": "Microscopy",
   "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
@@ -157,6 +168,7 @@
  },
  {
   "test_name": "Bone Marrow Biopsy",
+  "unit": "NA",
   "reference_range": "Normal marrow cellularity: 30 - 70% depending on age",
   "category": "Histopathology",
   "department": "DEPARTMENT OF HISTOPATHOLOGY",
@@ -186,7 +198,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 16
  },
  {
   "test_name": "Absolute Lymphocyte Count",
@@ -196,7 +209,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 17
  },
  {
   "test_name": "Absolute Eosinophil Count (AEC)",
@@ -206,7 +220,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated Flow Cytometry"
+  "method": "Automated Flow Cytometry",
+  "display_order": 12
  },
  {
   "test_name": "ESR",
@@ -258,7 +273,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 3
  },
  {
   "test_name": "Direct Coombs Test",
@@ -300,16 +316,6 @@
   "method": "HPLC"
  },
  {
-  "test_name": "EOSINOPHILS",
-  "unit": "/UL",
-  "reference_range": "01-06%",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
- },
- {
   "test_name": "PACKED CELL VOLUME",
   "unit": "%",
   "reference_range": "40-48%",
@@ -317,7 +323,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 11
  },
  {
   "test_name": "Peripheral Smear Examination",
@@ -325,7 +332,7 @@
   "category": "Microscopy",
   "department": "DEPARTMENT OF CLINICAL PATHOLOGY",
   "method": "Leishman Stain",
-  "Column10": " "
+  "display_order": " "
  },
  {
   "test_name": "Immature Platelet Fraction (IPF)",
@@ -375,13 +382,14 @@
  },
  {
   "test_name": "MCH",
-  "unit": "pg",
+  "unit": "pc",
   "reference_range": "30-32 pc",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Calculated"
+  "method": "Calculated",
+  "display_order": 15
  },
  {
   "test_name": "MCHC",
@@ -391,7 +399,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Calculated"
+  "method": "Calculated",
+  "display_order": 13
  },
  {
   "test_name": "MCV",
@@ -401,7 +410,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Calculated"
+  "method": "Calculated",
+  "display_order": 14
  },
  {
   "test_name": "MPV (Mean Platelet Volume)",
@@ -411,7 +421,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 18
  },
  {
   "test_name": "Osmotic Fragility Test",
@@ -420,16 +431,6 @@
   "category": "Hematology",
   "department": "DEPARTMENT OF HAEMATOLOGY",
   "method": "Spectrophotometry"
- },
- {
-  "test_name": "Hematocrit (PCV)",
-  "unit": "%",
-  "reference_range": "Hematocrit (PCV) → Male: 40 - 50 %<br>Female: 36 - 46 %",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
  },
  {
   "test_name": "Peritoneal Fluid Cell Count",
@@ -471,7 +472,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 19
  },
  {
   "test_name": "RDW",
@@ -481,7 +483,8 @@
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated"
+  "method": "Automated",
+  "display_order": 20
  },
  {
   "test_name": "Reticulocyte Count",
@@ -5167,7 +5170,8 @@
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
-  "method": "CLIA"
+  "method": "CLIA",
+  "display_order": 4
  },
  {
   "test_name": "Free T4",
@@ -5177,7 +5181,8 @@
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
-  "method": "CLIA"
+  "method": "CLIA",
+  "display_order": 5
  },
  {
   "test_name": "G6PD Quantitative",
@@ -5958,7 +5963,8 @@
   "test_name": "Methaqualone",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Methotrexate",
@@ -5972,7 +5978,8 @@
   "test_name": "Methylmalonic Acid (Qualitative)",
   "reference_range": "Negative",
   "category": "Colorimetry",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "GC-MS"
  },
  {
   "test_name": "Methylmalonic Acid (Quantitative)",
@@ -6010,7 +6017,8 @@
   "test_name": "Morphine/Opiates",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Myoglobin (Serum)",
@@ -6024,7 +6032,8 @@
   "test_name": "Myoglobin (Urine)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoturbidimetry"
  },
  {
   "test_name": "Nickel (Blood)",
@@ -6150,7 +6159,8 @@
   "test_name": "Phencyclidine (PCP)",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Phenobarbital",
@@ -6220,13 +6230,15 @@
   "test_name": "Porphyrins (Urine Spot)",
   "reference_range": "Negative",
   "category": "Fluorometry",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Spectrophotometry"
  },
  {
   "test_name": "Porphyrins (Urine 24 hr)",
   "reference_range": "Adults: 0 - 300 µg/24hr",
   "category": "Fluorometry",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Spectrophotometry"
  },
  {
   "test_name": "Potassium (Fluid)",
@@ -6290,13 +6302,15 @@
   "test_name": "Propoxyphene",
   "reference_range": "Negative",
   "category": "Immunoassay",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunoassay"
  },
  {
   "test_name": "Protein Electrophoresis (Urine)",
   "reference_range": "No Monoclonal Band Detected",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "Protein (Fluid)",
@@ -6363,7 +6377,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Urease-GLDH"
  },
  {
   "test_name": "Creatinine",
@@ -6372,7 +6387,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Jaffe"
  },
  {
   "test_name": "Uric Acid",
@@ -6381,7 +6397,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Uricase"
  },
  {
   "test_name": "Sodium",
@@ -6390,7 +6407,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ISE"
  },
  {
   "test_name": "Potassium",
@@ -6399,7 +6417,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ISE"
  },
  {
   "test_name": "Chloride",
@@ -6408,7 +6427,8 @@
   "category": "Panel",
   "panel": "KFT",
   "panel_display": "KIDNEY FUNCTION TEST (KFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "ISE"
  },
  {
   "test_name": "Bicarbonate (HCO3)",
@@ -6417,7 +6437,8 @@
   "category": "Panel",
   "panel": "ELECTROLYTES",
   "panel_display": "ELECTROLYTE PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Calculated"
  },
  {
   "test_name": "Selenium (Urine Spot)",
@@ -6502,7 +6523,7 @@
  {
   "test_name": "Serum Prolactin",
   "unit": "ng/mL",
-  "reference_range": "Adults Female: 5 - 25 ng/mL",
+  "reference_range": "Men :4.04-15.2 ng/mL Women :2.52-26.81 ng/mL First trimester 9.95-101 ng/mL Second trimester 17.2.-270ng/mL Third trimester 67.9.-419 ng/mL",
   "category": "Endocrinology",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
   "method": "CLIA"
@@ -6511,7 +6532,8 @@
   "test_name": "Serum Protein Electrophoresis",
   "reference_range": "Normal Protein Pattern",
   "category": "Electrophoresis",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Electrophoresis"
  },
  {
   "test_name": "Serum TIBC",
@@ -6637,13 +6659,15 @@
   "test_name": "Stone Analysis",
   "reference_range": "Composition Analysis Performed",
   "category": "Spectroscopy",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "FTIR"
  },
  {
   "test_name": "Synovial Fluid Biochemical Analysis",
   "reference_range": "Variable depending on fluid type",
   "category": "Autoanalyzer",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Biochemistry"
  },
  {
   "test_name": "T3 Total",
@@ -6653,7 +6677,8 @@
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
-  "method": "CLIA"
+  "method": "CLIA",
+  "display_order": 1
  },
  {
   "test_name": "T4 Total",
@@ -6663,7 +6688,8 @@
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
-  "method": "CLIA"
+  "method": "CLIA",
+  "display_order": 2
  },
  {
   "test_name": "Tacrolimus",
@@ -6706,31 +6732,37 @@
   "method": "CLIA"
  },
  {
-  "test_name": "T3 (Triiodothyronine)",
+  "test_name": "Total Triiodothyronine [T3]",
   "unit": "ng/dL",
-  "reference_range": "Adults: 80 - 200 ng/dL",
+  "reference_range": "NEW BORN: 0.7-2.0 <1 YEAR :1.0-2.4 1-5 YEARS:1.0-2.4 6-10 YEARS:0.9-2.4 11-50YEARS: 0.7-2.0 First trimester: 0.8-1.9 Second trimester: 1.0-2.6 >50 YEARS:0.4-1.8 ng/ml",
   "category": "Panel",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA",
+  "display_order": 6
  },
  {
-  "test_name": "T4 (Thyroxine)",
+  "test_name": "Total Thyroxine[T4]",
   "unit": "Ug/dL",
-  "reference_range": "Adults: 5 - 12 µg/dL",
+  "reference_range": "5.84-14.28 ug/dl",
   "category": "Panel",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA",
+  "display_order": 7
  },
  {
   "test_name": "TSH (Thyroid Stimulating Hormone)",
   "unit": "UIU/mL",
-  "reference_range": "Adults: 0.4 - 4.0 µIU/mL",
+  "reference_range": "NEW BORN: 1.0-39.0 2-20 WEEKS: 1.7-9.1 21 weeks-20years: 0.7-6.4 21-54 YEARS :0.38-5.33\n55-87 YEARS: 0.5-8.9 First trimester: 0.05-3.7 Second trimester :0.31-4.35\nThird trimester: 0.41-5.18 ult/mL",
   "category": "Panel",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY"
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA",
+  "display_order": 3
  },
  {
   "test_name": "Total IgE",
@@ -6797,7 +6829,8 @@
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
-  "method": "CLIA"
+  "method": "CLIA",
+  "display_order": 8
  },
  {
   "test_name": "UIBC",
@@ -6866,7 +6899,8 @@
   "test_name": "Urine Pregnancy Test",
   "reference_range": "Negative",
   "category": "Rapid Test",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Immunochromatography"
  },
  {
   "test_name": "Urine Triglycerides",
@@ -6936,7 +6970,8 @@
   "test_name": "ALPS Panel",
   "reference_range": "Within Normal Limits",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "CD4 Count",
@@ -6973,307 +7008,358 @@
   "test_name": "Flow Cytometry - Acute Leukemia Profile",
   "reference_range": "No Abnormal Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry - CLL MRD Panel",
   "reference_range": "MRD Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry - ALCP & MRD Panel",
   "reference_range": "MRD Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry - DNA Ploidy & S-Phase",
   "reference_range": "Diploid Pattern",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry BRAF V600E",
   "reference_range": "BRAF Mutation Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD13",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD15",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD20",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD38",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD4",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD7",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD8",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD34",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Kappa Light Chain",
   "reference_range": "Kappa Restricted / Normal",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Lambda Light Chain",
   "reference_range": "Lambda Restricted / Normal",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry FMC-7",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Glycophorin A",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Hairy Cell Panel",
   "reference_range": "No Hairy Cell Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Leukemia/Lymphoma Panel",
   "reference_range": "No Abnormal Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Comprehensive Diagnostic Panel",
   "reference_range": "No Abnormal Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Lymphoma Panel",
   "reference_range": "No Abnormal Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry MDS Panel",
   "reference_range": "No Dysplastic Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry PNH Workup",
   "reference_range": "PNH Clone Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry PNH RBC Panel",
   "reference_range": "PNH Clone Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry PNH Polymorph Panel",
   "reference_range": "PNH Clone Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry PNH with FLAER",
   "reference_range": "PNH Clone Not Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry TdT",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry ZAP-70",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry AML Panel",
   "reference_range": "No Abnormal Myeloid Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD10",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD103",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD117",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD138",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD14",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD16",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD19",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD2",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD22",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD23",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD25",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD3",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD34 (Stem Cells)",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD45",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD5",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD56",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD61",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry CD64",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Cytoplasmic CD3",
   "reference_range": "Positive / Negative Expression",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Myeloma MRD Panel",
   "reference_range": "No Residual Disease Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Multiple Myeloma Panel",
   "reference_range": "No Abnormal Plasma Cell Population Detected",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry NK Cell",
   "reference_range": "Normal NK Cell Population",
   "category": "Flow Cytometry",
-  "department": "DEPARTMENT OF IMMUNOLOGY"
+  "department": "DEPARTMENT OF IMMUNOLOGY",
+  "method": "Flow Cytometry"
  },
  {
   "test_name": "Flow Cytometry Lymphocyte Subset Enumeration",
@@ -7305,7 +7391,619 @@
  },
  {
   "test_name": "Traceable NGSP/DCCT MBG",
-  "unit": "mg/dL"
+  "unit": "mg/dL",
+  "method": "Calculated"
+ },
+ {
+  "record": 9001,
+  "test_name": "Vitamin D",
+  "unit": "ng/mL",
+  "reference_range": "30-100",
+  "category": "Biochemistry",
+  "panel": "VIT_PACKAGE",
+  "panel_display": "VITAMIN PACKAGE",
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CMIA",
+  "display_order": 1
+ },
+ {
+  "record": 9002,
+  "test_name": "Vitamin B12",
+  "unit": "pg/mL",
+  "reference_range": "200-900",
+  "category": "Biochemistry",
+  "panel": "VIT_PACKAGE",
+  "panel_display": "VITAMIN PACKAGE",
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CMIA",
+  "display_order": 2
+ },
+ {
+  "record": 9003,
+  "test_name": "CBC",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "VIT_PACKAGE",
+  "panel_display": "VITAMIN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9004,
+  "test_name": "TSH",
+  "unit": "µIU/mL",
+  "reference_range": "0.4-4.5",
+  "category": "Biochemistry",
+  "panel": "VIT_PACKAGE",
+  "panel_display": "VITAMIN PACKAGE",
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "CLIA",
+  "display_order": 4
+ },
+ {
+  "record": 9005,
+  "test_name": "Calcium",
+  "unit": "mg/dL",
+  "reference_range": "8.5-10.5",
+  "category": "Biochemistry",
+  "panel": "VIT_PACKAGE",
+  "panel_display": "VITAMIN PACKAGE",
+  "department": "DEPARTMENT OF BIOCHEMISTRY",
+  "method": "Colorimetric",
+  "display_order": 5
+ },
+ {
+  "record": 9101,
+  "test_name": "CBC",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9102,
+  "test_name": "Blood Sugar (Fasting & PP)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9103,
+  "test_name": "HbA1c",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9104,
+  "test_name": "Liver Function Test (LFT)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9105,
+  "test_name": "Kidney Function Test (KFT)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9106,
+  "test_name": "Lipid Profile",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 6
+ },
+ {
+  "record": 9107,
+  "test_name": "Thyroid Profile (T3, T4, TSH)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 7
+ },
+ {
+  "record": 9108,
+  "test_name": "Vitamin D",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 8
+ },
+ {
+  "record": 9109,
+  "test_name": "Vitamin B12",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 9
+ },
+ {
+  "record": 9110,
+  "test_name": "Calcium",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 10
+ },
+ {
+  "record": 9111,
+  "test_name": "Urine Routine",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "FULL_BODY_PACKAGE",
+  "panel_display": "FULL BODY CHECKUP",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 11
+ },
+ {
+  "record": 9201,
+  "test_name": "Fasting Blood Sugar (FBS)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9202,
+  "test_name": "Post Prandial Blood Sugar (PPBS)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9203,
+  "test_name": "HbA1c",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9204,
+  "test_name": "Urine Sugar",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9205,
+  "test_name": "Urine Routine",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9206,
+  "test_name": "Creatinine",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 6
+ },
+ {
+  "record": 9207,
+  "test_name": "Microalbumin Urine",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "DIABETIC_PROFILE",
+  "panel_display": "DIABETIC PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 7
+ },
+ {
+  "record": 9401,
+  "test_name": "Total Bilirubin",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9402,
+  "test_name": "SGOT (AST)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9403,
+  "test_name": "SGPT (ALT)",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9404,
+  "test_name": "Alkaline Phosphatase",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9405,
+  "test_name": "Total Protein",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9406,
+  "test_name": "Albumin",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LFT",
+  "panel_display": "LIVER FUNCTION TEST (LFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 6
+ },
+ {
+  "record": 9501,
+  "test_name": "Urea",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "KFT",
+  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9502,
+  "test_name": "Creatinine",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "KFT",
+  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9503,
+  "test_name": "Uric Acid",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "KFT",
+  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9504,
+  "test_name": "Sodium",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "KFT",
+  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9505,
+  "test_name": "Potassium",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "KFT",
+  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9601,
+  "test_name": "Total Cholesterol",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LIPID_PROFILE",
+  "panel_display": "LIPID PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9602,
+  "test_name": "Triglycerides",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LIPID_PROFILE",
+  "panel_display": "LIPID PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9603,
+  "test_name": "HDL Cholesterol",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LIPID_PROFILE",
+  "panel_display": "LIPID PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9604,
+  "test_name": "LDL Cholesterol",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LIPID_PROFILE",
+  "panel_display": "LIPID PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9605,
+  "test_name": "VLDL Cholesterol",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "LIPID_PROFILE",
+  "panel_display": "LIPID PROFILE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9701,
+  "test_name": "CBC",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9702,
+  "test_name": "HbA1c",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9703,
+  "test_name": "TSH",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9704,
+  "test_name": "Vitamin D",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9705,
+  "test_name": "Vitamin B12",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9706,
+  "test_name": "Calcium",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "WOMENS_HEALTH_PACKAGE",
+  "panel_display": "WOMENS HEALTH PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 6
+ },
+ {
+  "record": 9801,
+  "test_name": "CBC",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 1
+ },
+ {
+  "record": 9802,
+  "test_name": "HbA1c",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 2
+ },
+ {
+  "record": 9803,
+  "test_name": "Lipid Profile",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 3
+ },
+ {
+  "record": 9804,
+  "test_name": "KFT",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 4
+ },
+ {
+  "record": 9805,
+  "test_name": "LFT",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 5
+ },
+ {
+  "record": 9806,
+  "test_name": "TSH",
+  "unit": "NA",
+  "reference_range": "PACKAGE TEST",
+  "category": "Package",
+  "panel": "SENIOR_CITIZEN_PACKAGE",
+  "panel_display": "SENIOR CITIZEN PACKAGE",
+  "department": "PACKAGE",
+  "method": "PANEL",
+  "display_order": 6
  }
-
 ]

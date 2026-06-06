@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -1219,6 +1222,9 @@ body.pdf-mode{
     background:#fff !important;
 }
 
+
+
+
 body.pdf-mode .topbar,
 body.pdf-mode .action-bar,
 body.pdf-mode .notice,
@@ -1243,11 +1249,15 @@ body.pdf-mode .report-box{
 }
 
 body.pdf-mode .report-page-one{
-    min-height:270mm !important;
+    min-height:250mm !important;
     padding:8px 12px !important;
 
     display:flex !important;
     flex-direction:column !important;
+}
+
+body.pdf-mode .print-footer-block{
+    padding-top:10mm;
 }
 
 body.pdf-mode .report-page-content{
@@ -1328,37 +1338,49 @@ body.pdf-mode .info-item select{
 /* PDF TABLE */
 
 body.pdf-mode .department-heading td{
+    background:#fff !important;
+    color:#111 !important;
     text-align:center !important;
     text-decoration:underline !important;
-    font-size:13px !important;
-    font-weight:800 !important;
+    font-size:11px !important;
+    font-weight:700 !important;
     text-transform:uppercase !important;
+    padding:4px 0 !important;
 }
 
 body.pdf-mode .panel-heading td{
+    background:#fff !important;
+    color:#111 !important;
     text-align:center !important;
-    font-size:16px !important;
-    font-weight:800 !important;
+    font-size:14px !important;
+    font-weight:700 !important;
+    padding:4px 0 8px 0 !important;
 }
-
 
 body.pdf-mode .result-table{
     font-size:10.5px !important;
 }
+
+body.pdf-mode .result-table thead{
+    display:table-header-group !important;
+}
+
 
 body.pdf-mode .result-table th{
     background:#fff !important;
     color:#111 !important;
     border:none !important;
     border-bottom:1px solid #111 !important;
-    padding:4px 3px !important;
-    text-align:left !important;
+    padding:6px 6px !important;
+    font-weight:700 !important;
+    text-align:center !important;
 }
 
 body.pdf-mode .result-table td{
     border:none !important;
     padding:4px 6px !important;
     vertical-align:top !important;
+    color:#111 !important;
 }
 
 body.pdf-mode .result-table td:nth-child(1){
@@ -1499,6 +1521,26 @@ body.pdf-mode .end-report{
 body.pdf-mode .report-final-footer{
     margin-top:0 !important;
 }
+
+body.pdf-mode .pdf-reference-range{
+
+    font-size:10px !important;
+
+    line-height:1.5 !important;
+
+    white-space:pre-wrap !important;
+
+    word-break:break-word !important;
+
+    overflow-wrap:break-word !important;
+
+    text-align:left !important;
+
+    width:100% !important;
+
+}
+
+
 @media print{
 
 
@@ -1588,6 +1630,33 @@ body.pdf-mode .report-final-footer{
         width:100%;
         border-collapse:collapse;
     }
+
+    .pdf-reference-range{
+
+    white-space: pre-wrap;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+
+    overflow-wrap: break-word;
+
+    font-size: 11px;
+
+    width: 100%;
+
+}
+}
+thead{
+    display:table-header-group !important;
+}
+
+.result-table thead{
+    display:table-header-group !important;
+}
+
+.result-table tfoot{
+    display:table-footer-group !important;
 }
 
 
@@ -1609,16 +1678,9 @@ body.pdf-mode .report-final-footer{
             <button class="btn-primary" onclick="loadReportData()">Refresh</button>
         </div>
         <div>
-            <button class="btn-success icon-btn" onclick="saveReport()" title="Save Report">
-                <i class="fa-solid fa-floppy-disk"></i>
-            </button>
 
             <button class="btn-primary icon-btn" onclick="printReport()" title="Print">
                 <i class="fa-solid fa-print"></i>
-            </button>
-
-            <button class="btn-warning icon-btn" onclick="downloadPDF()" title="Download PDF">
-                <i class="fa-solid fa-file-pdf"></i>
             </button>
 
             <button class="btn-secondary icon-btn" onclick="clientCopyPrint()" title="Client Copy">
@@ -1631,10 +1693,10 @@ body.pdf-mode .report-final-footer{
     class="btn-success"
     onclick="openWhatsAppChat()"
 >
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    <i class="fa-brands fa-whatsapp"></i>
 </button>
 
-            <button class="btn-danger" onclick="deleteUploadedReport()">🗑 Delete</button>
+            <button class="btn-danger" onclick="deleteUploadedReport()">🗑</button>
         </div>
     </div>
 
@@ -2300,7 +2362,9 @@ function addDepartmentHeading(name){
     body.insertAdjacentHTML("beforeend", `
         <tr class="department-heading">
             <td colspan="5">
-                DEPARTMENT OF ${escapeHtml(name)}
+                <div style="width:100%;text-align:center;">
+                    DEPARTMENT OF ${escapeHtml(name)}
+                </div>
             </td>
         </tr>
     `);
@@ -2313,7 +2377,9 @@ function addPanelHeading(name){
     body.insertAdjacentHTML("beforeend", `
         <tr class="panel-heading">
             <td colspan="5">
-                ${escapeHtml(name)}
+                <div style="width:100%;text-align:center;">
+                    ${escapeHtml(name)}
+                </div>
             </td>
         </tr>
     `);
@@ -2898,7 +2964,23 @@ function collectReportData(){
     return rows;
 }
 
+
+function resetResultColors(){
+
+    document
+        .querySelectorAll(".observed-value")
+        .forEach(input => {
+
+            input.style.color = "#111";
+            input.style.fontWeight = "600";
+
+        });
+
+}
+
+
 async function saveReport(){
+    resetResultColors();
     const payload = {
         invoice_no: invoiceNo,
         barcode: barcodeNo,
@@ -2957,51 +3039,110 @@ function generateReportQR(){
 
     new QRCode(qrBox, {
         text: verifyUrl,
-        width: 58,
-        height: 58,
-        colorDark : "#c24141",
+        width: 140,
+        height: 140,
+        colorDark : "#991b1b",
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
 }
-
 async function printReport(){
+
+    resetResultColors();
 
     generateReportQR();
 
+    document.querySelectorAll(".reference-range").forEach(el => {
+
+        const div = document.createElement("div");
+
+        div.className = "pdf-reference-range";
+
+        div.innerHTML =
+            (el.value || "")
+            .replace(/\n/g,"<br>");
+
+        el.style.display = "none";
+
+        el.parentNode.appendChild(div);
+
+    });
+
     window.print();
 
-    // SAVE IN BACKGROUND
+    document.querySelectorAll(".pdf-reference-range")
+        .forEach(el => el.remove());
+
+    document.querySelectorAll(".reference-range")
+        .forEach(el => {
+            el.style.display = "";
+        });
+
     saveReport();
 
 }
 
-
 async function downloadPDF(){
 
+    resetResultColors();
+
     generateReportQR();
+
+    document.querySelectorAll(".reference-range").forEach(el => {
+
+        const div = document.createElement("div");
+
+        div.className = "pdf-reference-range";
+
+        div.innerHTML =
+            (el.value || "")
+            .replace(/\n/g, "<br>");
+
+        el.style.display = "none";
+
+        el.parentNode.appendChild(div);
+
+    });
 
     document.body.classList.add("pdf-mode");
 
     const element = document.getElementById("reportBox");
     const reportNo = document.getElementById("reportNo").value;
 
-        const patientName = document
-            .getElementById("patientName")
-            .value
-            .trim()
-            .replace(/[^a-z0-9]/gi, "_");
+    const patientName = document
+        .getElementById("patientName")
+        .value
+        .trim()
+        .replace(/[^a-z0-9]/gi, "_");
 
-        const fileName =
-            reportNo + " - " + patientName + ".pdf";
+    const fileName =
+        reportNo + " - " + patientName + ".pdf";
 
-        const opt = {
-            margin:[4, 6, 4, 6],
-            filename: fileName,
-            image:{type:"jpeg", quality:1},
-            html2canvas:{scale:2, useCORS:true},
-            jsPDF:{unit:"mm", format:"a4", orientation:"portrait"}
-        };
+    const opt = {
+        margin:[4,6,4,6],
+
+        filename:fileName,
+
+        image:{
+            type:"jpeg",
+            quality:1
+        },
+
+        html2canvas:{
+            scale:2,
+            useCORS:true
+        },
+
+        pagebreak:{
+            mode:['css','legacy']
+        },
+
+        jsPDF:{
+            unit:"mm",
+            format:"a4",
+            orientation:"portrait"
+        }
+    };
 
     try{
 
@@ -3012,9 +3153,14 @@ async function downloadPDF(){
 
         const formData = new FormData();
 
-        formData.append("pdf", new File([pdfBlob], reportNo + ".pdf", {
-            type:"application/pdf"
-        }));
+        formData.append(
+            "pdf",
+            new File(
+                [pdfBlob],
+                reportNo + ".pdf",
+                { type:"application/pdf" }
+            )
+        );
 
         formData.append("report_no", reportNo);
         formData.append("invoice_no", invoiceNo);
@@ -3028,26 +3174,52 @@ async function downloadPDF(){
         const data = await res.json();
 
         if(data.success){
+
             uploadedReport = data.file;
-            showNotice("Report saved with QR verification.");
+
+            showNotice(
+                "Report saved with QR verification."
+            );
+
         }else{
-            showNotice(data.message || "Report verification save failed.");
+
+            showNotice(
+                data.message ||
+                "Report verification save failed."
+            );
+
         }
 
-        await html2pdf().set(opt).from(element).save();
+        await html2pdf()
+            .set(opt)
+            .from(element)
+            .save();
 
     }catch(err){
 
         console.error("PDF ERROR:", err);
-        alert("PDF generation failed. Check console.");
+
+        alert(
+            "PDF generation failed. Check console."
+        );
 
     }finally{
 
         document.body.classList.remove("pdf-mode");
 
-    }
-}
+        document
+            .querySelectorAll(".pdf-reference-range")
+            .forEach(el => el.remove());
 
+        document
+            .querySelectorAll(".reference-range")
+            .forEach(el => {
+                el.style.display = "";
+            });
+
+    }
+
+}
 
 
 document.getElementById("reportFile").addEventListener("change", async function(){
@@ -3198,8 +3370,29 @@ function openWhatsAppChat(){
         .value
         .trim();
 
+    const reportNo =
+        document.getElementById("reportNo")
+        .value
+        .trim();
+
     const message =
-        `Hello ${patientName}, your report is ready.`;
+    `Dear ${patientName},
+
+    Greetings from Rapid Labs.
+
+    Your laboratory report has been completed and is ready for review.
+
+    Patient Name: ${patientName}
+    Report Number: ${reportNo}
+    Mobile Number: ${mobile}
+
+    For any clarification regarding your report, please contact our team.
+
+    Rapid Labs
+    Comprehensive Diagnostic Labs
+     +91 7975357102
+
+    Thank you for choosing Rapid Labs.`;
 
     window.open(
         `https://wa.me/${mobile}?text=${encodeURIComponent(message)}`,
@@ -3405,6 +3598,32 @@ document.getElementById("testSearchInput")
         else if(items.length > 0){
 
             items[0].click();
+
+        }
+
+    }
+
+});
+
+document.addEventListener("keydown", function(e){
+
+    if(
+        e.key === "Enter" &&
+        e.target.classList.contains("observed-value")
+    ){
+
+        e.preventDefault();
+
+        const inputs = Array.from(
+            document.querySelectorAll(".observed-value")
+        );
+
+        const currentIndex = inputs.indexOf(e.target);
+
+        if(currentIndex < inputs.length - 1){
+
+            inputs[currentIndex + 1].focus();
+            inputs[currentIndex + 1].select();
 
         }
 
@@ -3800,6 +4019,8 @@ function editStructuredBlock(btn){
 loadTestMaster();
 loadReportData();
 </script>
+
+
 
 <div id="structuredModal" class="structured-modal">
 
