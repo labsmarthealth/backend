@@ -363,8 +363,28 @@ def init_db():
     )
     """)
 
+
+    cursor.execute(
+    "SELECT id FROM users WHERE role='ADMIN'"
+    )
+
+    admin = cursor.fetchone()
+
+    if not admin:
+        cursor.execute("""
+        INSERT INTO users
+        (name,email,password_hash,role)
+        VALUES (?,?,?,?)
+        """, (
+            "Admin",
+            "admin@gmail.com",
+            "admin123",
+            "ADMIN"
+        ))
+
     conn.commit()
     conn.close()
+
 
 
 # CALL THIS
@@ -2634,28 +2654,6 @@ def get_report_api():
             "message": "Server error"
         }), 500
     
-
-@app.route("/create-admin")
-def create_admin():
-
-    conn = get_db_connection()
-    cursor = conn.cursor()
-
-    cursor.execute("""
-    INSERT INTO users (name, email, password_hash, role)
-    VALUES (?, ?, ?, ?)
-    """, ("Admin", "admin@gmail.com", "admin123", "ADMIN"))
-
-    conn.commit()
-    conn.close()
-
-    return "Admin created"
-
-
-
-
-
-
 
         
 # clientside report 
