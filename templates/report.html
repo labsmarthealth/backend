@@ -913,6 +913,16 @@ body.modal-open{
     font-size:12px;
 }
 
+.structured-report-main-title{
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    text-align: left;
+    margin: 8px 0 12px;
+    padding-bottom: 4px;
+    font-family: Arial, sans-serif;
+}
+
 
 /* PRINT + PDF */
 @media print{
@@ -2755,73 +2765,78 @@ async function createQuickTest(name){
     }, 100);
 }
 
-
 function deleteRow(btn){
 
-    const row =
-        btn.closest("tr");
+    const row = btn.closest("tr");
+    if(!row) return;
 
-    const prevRow =
-        row.previousElementSibling;
-
-    // SAVE FOR UNDO
-    deletedRows.push({
-
-        rowHtml: row.outerHTML,
-
-        parent: row.parentNode,
-
-        nextSibling: row.nextElementSibling,
-
-        departmentHtml:
-            (
-                prevRow &&
-                prevRow.classList.contains("department-row")
-            )
-            ? prevRow.outerHTML
-            : null,
-
-        departmentNext:
-            (
-                prevRow &&
-                prevRow.classList.contains("department-row")
-            )
-            ? prevRow.nextElementSibling
-            : null
-
-    });
+    const tbody = row.parentElement;
 
     row.remove();
 
-    // REMOVE EMPTY DEPARTMENT ALSO
-    if(
+    const rows = Array.from(
+        tbody.querySelectorAll("tr")
+    );
 
-        prevRow &&
-
-        prevRow.classList.contains(
-            "department-row"
-        )
-
-    ){
-
-        const nextRow =
-            prevRow.nextElementSibling;
+    rows.forEach(currentRow => {
 
         if(
-
-            !nextRow ||
-
-            nextRow.classList.contains(
-                "department-row"
-            )
-
+            !currentRow.classList.contains("panel-heading")
         ){
-
-            prevRow.remove();
-
+            return;
         }
 
-    }
+        let hasTests = false;
+
+        let next = currentRow.nextElementSibling;
+
+        while(next){
+
+            if(
+                next.classList.contains("panel-heading") ||
+                next.classList.contains("department-heading")
+            ){
+                break;
+            }
+
+            if(
+                !next.classList.contains("structured-main-row")
+            ){
+                hasTests = true;
+                break;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        if(!hasTests){
+
+            const prev =
+                currentRow.previousElementSibling;
+
+            currentRow.remove();
+
+            if(
+                prev &&
+                prev.classList.contains(
+                    "department-heading"
+                )
+            ){
+
+                const afterDept =
+                    prev.nextElementSibling;
+
+                if(
+                    !afterDept ||
+                    afterDept.classList.contains(
+                        "department-heading"
+                    )
+                ){
+                    prev.remove();
+                }
+            }
+        }
+    });
 }
 
 function undoDelete(){
@@ -3827,12 +3842,14 @@ function closeStructuredModal(){
 }
 
 
+function addStructuredReport() {
 
-
-function addStructuredReport(){
+    const reportTitle =
+        document.getElementById(
+            "structuredReportTitle"
+        )?.value || "";
 
     const sections =
-
         document.querySelectorAll(
             ".structured-section"
         );
@@ -3842,6 +3859,10 @@ function addStructuredReport(){
 <tr class="structured-main-row">
 
     <td colspan="5">
+
+        <div class="structured-report-main-title">
+            ${reportTitle}
+        </div>
 
         <div class="structured-actions no-print">
 
@@ -3868,7 +3889,6 @@ function addStructuredReport(){
     sections.forEach(section => {
 
         const title =
-
             section.querySelector("h4")
             ?.innerText || "";
 
@@ -3892,13 +3912,11 @@ function addStructuredReport(){
         rows.forEach(row => {
 
             const label =
-
                 row.querySelector(
                     ".structured-label"
                 )?.value || "";
 
             const value =
-
                 row.querySelector(
                     ".structured-value"
                 )?.value || "";
@@ -3937,12 +3955,19 @@ function addStructuredReport(){
 
     `;
 
-    document.getElementById(
-        "resultBody"
-    ).innerHTML += finalHtml;
+    const resultBody =
+        document.getElementById(
+            "resultBody"
+        );
+
+    resultBody.insertAdjacentHTML(
+        "beforeend",
+        finalHtml
+    );
 
     closeStructuredModal();
 }
+
 
 
 function deleteStructuredBlock(btn){
@@ -3955,12 +3980,14 @@ function deleteStructuredBlock(btn){
     }
 }
 
-
 function editStructuredBlock(btn){
 
-    const block =
+    const block = btn.closest("tr");
 
-        btn.closest("tr");
+    const titles =
+        block.querySelectorAll(
+            ".structured-print-title"
+        );
 
     const labels =
         block.querySelectorAll(
@@ -3972,18 +3999,45 @@ function editStructuredBlock(btn){
             ".structured-value-text"
         );
 
-    values.forEach((v,i)=>{
+    // section headings
+    titles.forEach(t => {
+
+        const current =
+            t.innerText.trim();
+
+        t.innerHTML = `
+            <input
+                class="structured-inline-input"
+                value="${current}"
+            >
+        `;
+    });
+
+    // left labels
+    labels.forEach(l => {
+
+        const current =
+            l.innerText.trim();
+
+        l.innerHTML = `
+            <input
+                class="structured-inline-input"
+                value="${current}"
+            >
+        `;
+    });
+
+    // right values
+    values.forEach(v => {
 
         const current =
             v.innerText.trim();
 
         v.innerHTML = `
-
             <input
                 class="structured-inline-input"
                 value="${current}"
             >
-
         `;
     });
 
@@ -3991,17 +4045,37 @@ function editStructuredBlock(btn){
 
     btn.onclick = function(){
 
-        values.forEach(v=>{
+        titles.forEach(t => {
+
+            const input =
+                t.querySelector("input");
+
+            if(input){
+                t.innerText =
+                    input.value;
+            }
+        });
+
+        labels.forEach(l => {
+
+            const input =
+                l.querySelector("input");
+
+            if(input){
+                l.innerText =
+                    input.value;
+            }
+        });
+
+        values.forEach(v => {
 
             const input =
                 v.querySelector("input");
 
             if(input){
-
                 v.innerText =
                     input.value;
             }
-
         });
 
         btn.innerText = "Edit";
@@ -4028,7 +4102,12 @@ loadReportData();
 
         <div class="structured-head">
 
-            <h3>Structured Report</h3>
+            <input
+                type="text"
+                id="structuredReportTitle"
+                value="URINE EXAMINATION"
+                class="structured-main-title"
+            />
 
             <button onclick="closeStructuredModal()">
                 ✖
