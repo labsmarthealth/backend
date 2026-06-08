@@ -3130,7 +3130,6 @@ async function saveReport(){
     }
 }
 
-
 async function editReport(){
 
     document.getElementById(
@@ -3142,32 +3141,75 @@ async function editReport(){
             "reportListBox"
         );
 
-    const res =
-        await fetch("/api/report-list");
+    const search =
+        document.getElementById(
+            "reportSearch"
+        );
 
-    const reports =
-        await res.json();
+    search.value = "";
 
-    window.savedReports =
-        reports;
+    try{
 
-    box.innerHTML =
-        reports.map(r => `
+        const res =
+            await fetch("/api/report-list");
 
-            <div
-                onclick="loadSavedReport('${r.report_no}')"
-                style="
-                    padding:10px;
-                    border-bottom:1px solid #eee;
-                    cursor:pointer;
-                "
-            >
-                <b>${r.report_no}</b><br>
-                ${r.patient_name || ""}
+        const reports =
+            await res.json();
+
+        window.savedReports =
+            reports || [];
+
+        if(
+            !window.savedReports.length
+        ){
+
+            box.innerHTML = `
+                <div style="
+                    padding:20px;
+                    text-align:center;
+                    color:#777;
+                ">
+                    No reports saved yet
+                </div>
+            `;
+
+            return;
+        }
+
+        box.innerHTML =
+            window.savedReports.map(r => `
+
+                <div
+                    onclick="loadSavedReport('${r.report_no}')"
+                    style="
+                        padding:10px;
+                        border-bottom:1px solid #eee;
+                        cursor:pointer;
+                    "
+                >
+                    <b>${r.report_no}</b><br>
+                    ${r.patient_name || ""}
+                </div>
+
+            `).join("");
+
+    }catch(err){
+
+        console.error(err);
+
+        box.innerHTML = `
+            <div style="
+                padding:20px;
+                text-align:center;
+                color:red;
+            ">
+                Failed to load reports
             </div>
-
-        `).join("");
+        `;
+    }
 }
+
+
 
 function filterReportList(){
 
@@ -3181,9 +3223,8 @@ function filterReportList(){
             "reportListBox"
         );
 
-    box.innerHTML =
-        window.savedReports
-        .filter(r =>
+    const filtered =
+        window.savedReports.filter(r =>
 
             (r.report_no || "")
             .toLowerCase()
@@ -3195,8 +3236,25 @@ function filterReportList(){
             .toLowerCase()
             .includes(q)
 
-        )
-        .map(r => `
+        );
+
+    if(filtered.length === 0){
+
+        box.innerHTML = `
+            <div style="
+                padding:15px;
+                text-align:center;
+                color:#777;
+            ">
+                No saved reports found
+            </div>
+        `;
+
+        return;
+    }
+
+    box.innerHTML =
+        filtered.map(r => `
 
             <div
                 onclick="loadSavedReport('${r.report_no}')"
@@ -3212,6 +3270,7 @@ function filterReportList(){
 
         `).join("");
 }
+
 
 async function loadSavedReport(reportNo){
 
@@ -4481,9 +4540,51 @@ loadReportData();
 
 </div>
 
-<div id="reportPickerModal" style="display:none;">
-    <input id="reportSearch">
-    <div id="reportListBox"></div>
+<div id="reportPickerModal"
+     onclick="if(event.target===this)this.style.display='none';"
+     style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.4);
+        z-index:999999;
+        align-items:center;
+        justify-content:center;
+     ">
+
+    <div style="
+        width:600px;
+        max-width:90vw;
+        background:#fff;
+        border-radius:12px;
+        padding:20px;
+    ">
+
+        <h3>Select Saved Report</h3>
+
+        <input
+            id="reportSearch"
+            placeholder="Search Report No / Patient"
+            style="
+                width:100%;
+                padding:10px;
+                border:1px solid #ccc;
+                border-radius:6px;
+            "
+            oninput="filterReportList()"
+        >
+
+        <div
+            id="reportListBox"
+            style="
+                margin-top:15px;
+                max-height:400px;
+                overflow:auto;
+            ">
+        </div>
+
+    </div>
+
 </div>
 
 
