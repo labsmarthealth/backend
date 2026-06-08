@@ -4290,7 +4290,6 @@ def send_report_to_client():
 def uploaded_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
 
-
 @app.route("/api/save-report-pdf", methods=["POST"])
 def save_report_pdf():
 
@@ -4315,11 +4314,11 @@ def save_report_pdf():
         filename = secure_filename(report_no + ".pdf")
         filepath = os.path.join(UPLOAD_FOLDER, filename)
 
+        # overwrite old pdf if same report number
         pdf.save(filepath)
 
         conn = get_db_connection()
         cursor = conn.cursor()
-
 
         cursor.execute("""
         CREATE TABLE IF NOT EXISTS verified_reports (
@@ -4339,23 +4338,51 @@ def save_report_pdf():
         ]
 
         if "filename" not in existing_cols:
-            cursor.execute("ALTER TABLE verified_reports ADD COLUMN filename TEXT")
+            cursor.execute(
+                "ALTER TABLE verified_reports ADD COLUMN filename TEXT"
+            )
             conn.commit()
 
+        # CHECK EXISTING REPORT
         cursor.execute("""
-            INSERT INTO verified_reports (
+            SELECT id
+            FROM verified_reports
+            WHERE report_no = ?
+        """, (report_no,))
+
+        existing = cursor.fetchone()
+
+        if existing:
+
+            cursor.execute("""
+                UPDATE verified_reports
+                SET invoice_no=?,
+                    barcode=?,
+                    filename=?
+                WHERE report_no=?
+            """, (
+                invoice_no,
+                barcode,
+                filename,
+                report_no
+            ))
+
+        else:
+
+            cursor.execute("""
+                INSERT INTO verified_reports (
+                    report_no,
+                    invoice_no,
+                    barcode,
+                    filename
+                )
+                VALUES (?, ?, ?, ?)
+            """, (
                 report_no,
                 invoice_no,
                 barcode,
                 filename
-            )
-            VALUES (?, ?, ?, ?)
-        """, (
-            report_no,
-            invoice_no,
-            barcode,
-            filename
-        ))
+            ))
 
         try:
             cursor.execute("""
@@ -4387,7 +4414,69 @@ def save_report_pdf():
             "success": False,
             "message": str(e)
         }), 500
+    
 
+@app.route("/api/get-report-entry/<report_no>")
+def get_report_entry(report_no):
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT *
+        FROM report_entries
+        WHERE report_no = ?
+        ORDER BY id DESC
+        LIMIT 1
+    """, (report_no,))
+
+    row = cursor.fetchone()
+    conn.close()
+
+    if not row:
+        return jsonify({
+            "success": False,
+            "message": "Report not found"
+        })
+
+    import json
+
+    return jsonify({
+        "success": True,
+        "invoice_no": row["invoice_no"],
+        "barcode": row["barcode"],
+        "report_no": row["report_no"],
+        "patient_name": row["patient_name"],
+        "patient_mobile": row["patient_mobile"],
+        "client_name": row["client_name"],
+        "sample_type": row["sample_type"],
+        "results": json.loads(row["results_json"])
+    })
+
+
+@app.route("/api/report-list")
+def report_list():
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT
+            report_no,
+            patient_name,
+            created_at
+        FROM report_entries
+        ORDER BY id DESC
+        LIMIT 100
+    """)
+
+    rows = cursor.fetchall()
+    conn.close()
+
+    return jsonify([
+        dict(row)
+        for row in rows
+    ])
 
 @app.route("/verify-report/<report_no>")
 def verify_report(report_no):

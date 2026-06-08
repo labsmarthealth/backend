@@ -1670,6 +1670,37 @@ thead{
 }
 
 
+.floating-actions{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    z-index:99999;
+
+}
+
+.floating-actions .icon-btn{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.18);
+
+}
+
+
 </style>
 </head>
 
@@ -1682,34 +1713,26 @@ thead{
 
 <div class="wrapper">
 
-    <div class="action-bar no-print">
+<div class="action-bar no-print">
         <div>
             <button class="btn-secondary" onclick="goBack()">← Back</button>
             <button class="btn-primary" onclick="loadReportData()">Refresh</button>
         </div>
         <div>
 
-            <button class="btn-primary icon-btn" onclick="printReport()" title="Print">
-                <i class="fa-solid fa-print"></i>
-            </button>
+                <button class="btn-warning icon-btn"
+                        onclick="editReport()"
+                        title="Edit Report">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
 
-            <button class="btn-secondary icon-btn" onclick="clientCopyPrint()" title="Client Copy">
-                <i class="fa-solid fa-copy"></i>
-            </button>
 
             <input type="file" id="reportFile" accept=".pdf,.jpg,.jpeg,.png" style="display:none;">
 
-            <button
-    class="btn-success"
-    onclick="openWhatsAppChat()"
->
-    <i class="fa-brands fa-whatsapp"></i>
-</button>
 
-            <button class="btn-danger" onclick="deleteUploadedReport()">🗑</button>
+
         </div>
     </div>
-
     <div id="noticeBox" class="notice"></div>
 
     <div class="report-box" id="reportBox">
@@ -2778,6 +2801,7 @@ function deleteRow(btn){
         tbody.querySelectorAll("tr")
     );
 
+    // EXISTING PANEL CLEANUP
     rows.forEach(currentRow => {
 
         if(
@@ -2837,7 +2861,44 @@ function deleteRow(btn){
             }
         }
     });
+
+    // NEW DEPARTMENT CLEANUP FOR SINGLE TESTS
+    Array.from(
+        tbody.querySelectorAll(".department-heading")
+    ).forEach(deptRow => {
+
+        let hasTests = false;
+
+        let next = deptRow.nextElementSibling;
+
+        while(next){
+
+            if(
+                next.classList.contains("department-heading")
+            ){
+                break;
+            }
+
+            if(
+                !next.classList.contains("panel-heading") &&
+                !next.classList.contains("structured-main-row")
+            ){
+                hasTests = true;
+                break;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        if(!hasTests){
+            deptRow.remove();
+        }
+
+    });
+
 }
+
+
 
 function undoDelete(){
 
@@ -2919,20 +2980,41 @@ function collectReportData(){
     const trs =
         document.querySelectorAll("#resultBody tr");
 
+    let currentDepartment = "";
+    let currentPanel = "";
+
     trs.forEach(tr => {
 
-        // SKIP HEADINGS
+        // DEPARTMENT
         if(
-            tr.classList.contains("department-heading") ||
+            tr.classList.contains("department-heading")
+        ){
+
+            currentDepartment =
+                tr.innerText
+                    .replace(/^DEPARTMENT OF\s*/i,"")
+                    .trim();
+
+            currentPanel = "";
+
+            return;
+        }
+
+        // PANEL
+        if(
             tr.classList.contains("panel-heading")
         ){
+
+            currentPanel =
+                tr.innerText.trim();
+
             return;
         }
 
         const name =
             tr.querySelector(".test-name-main")
             ?.innerText
-            .trim() || "";
+            ?.trim() || "";
 
         const method =
             tr.querySelector(".method-input")
@@ -2942,7 +3024,7 @@ function collectReportData(){
         const observed =
             tr.querySelector(".observed-value")
             ?.value
-            .trim() || "";
+            ?.trim() || "";
 
         const inputs =
             tr.querySelectorAll("input");
@@ -2953,7 +3035,7 @@ function collectReportData(){
         const range =
             tr.querySelector(".reference-range")
             ?.value
-            .trim() || "";
+            ?.trim() || "";
 
         if(
             !name &&
@@ -2966,11 +3048,26 @@ function collectReportData(){
 
         rows.push({
 
-            name:name,
-            method:method,
-            value:observed,
-            unit:unit,
-            range:range
+            department:
+                currentDepartment,
+
+            panel:
+                currentPanel,
+
+            name:
+                name,
+
+            method:
+                method,
+
+            value:
+                observed,
+
+            unit:
+                unit,
+
+            range:
+                range
 
         });
 
@@ -3032,6 +3129,193 @@ async function saveReport(){
         showNotice("Report save API not ready yet. Print/PDF still works.");
     }
 }
+
+
+async function editReport(){
+
+    document.getElementById(
+        "reportPickerModal"
+    ).style.display = "flex";
+
+    const box =
+        document.getElementById(
+            "reportListBox"
+        );
+
+    const res =
+        await fetch("/api/report-list");
+
+    const reports =
+        await res.json();
+
+    window.savedReports =
+        reports;
+
+    box.innerHTML =
+        reports.map(r => `
+
+            <div
+                onclick="loadSavedReport('${r.report_no}')"
+                style="
+                    padding:10px;
+                    border-bottom:1px solid #eee;
+                    cursor:pointer;
+                "
+            >
+                <b>${r.report_no}</b><br>
+                ${r.patient_name || ""}
+            </div>
+
+        `).join("");
+}
+
+function filterReportList(){
+
+    const q =
+        document.getElementById(
+            "reportSearch"
+        ).value.toLowerCase();
+
+    const box =
+        document.getElementById(
+            "reportListBox"
+        );
+
+    box.innerHTML =
+        window.savedReports
+        .filter(r =>
+
+            (r.report_no || "")
+            .toLowerCase()
+            .includes(q)
+
+            ||
+
+            (r.patient_name || "")
+            .toLowerCase()
+            .includes(q)
+
+        )
+        .map(r => `
+
+            <div
+                onclick="loadSavedReport('${r.report_no}')"
+                style="
+                    padding:10px;
+                    border-bottom:1px solid #eee;
+                    cursor:pointer;
+                "
+            >
+                <b>${r.report_no}</b><br>
+                ${r.patient_name || ""}
+            </div>
+
+        `).join("");
+}
+
+async function loadSavedReport(reportNo){
+
+    document.getElementById(
+        "reportPickerModal"
+    ).style.display = "none";
+
+    document.getElementById(
+        "reportNo"
+    ).value = reportNo;
+
+    // call your existing edit loader
+    await loadReportForEdit(reportNo);
+}
+
+async function loadReportForEdit(reportNo){
+
+    const res = await fetch(
+        "/api/get-report-entry/" +
+        encodeURIComponent(reportNo)
+    );
+
+    const data = await res.json();
+
+    if(!data.success){
+        alert(data.message || "Report not found");
+        return;
+    }
+
+    document.getElementById("patientName").value =
+        data.patient_name || "";
+
+    document.getElementById("patientMobile").value =
+        data.patient_mobile || "";
+
+    document.getElementById("clientName").value =
+        data.client_name || "";
+
+    document.getElementById("sampleType").value =
+        data.sample_type || "Blood";
+
+    document.getElementById("reportNo").value =
+        data.report_no || "";
+
+    document.getElementById("invoiceNo").value =
+        data.invoice_no || "";
+
+    document.getElementById("barcodeNo").value =
+        data.barcode || "";
+
+    const body =
+        document.getElementById("resultBody");
+
+    body.innerHTML = "";
+
+    let lastDept = "";
+    let lastPanel = "";
+
+    (data.results || []).forEach(row => {
+
+        if(
+            row.department &&
+            row.department !== lastDept
+        ){
+            addDepartmentHeading(
+                row.department
+            );
+
+            lastDept =
+                row.department;
+
+            lastPanel = "";
+        }
+
+        if(
+            row.panel &&
+            row.panel !== lastPanel
+        ){
+            addPanelHeading(
+                row.panel
+            );
+
+            lastPanel =
+                row.panel;
+        }
+
+        addResultRow({
+
+            name: row.name || "",
+            method: row.method || "",
+            value: row.value || "",
+            unit: row.unit || "",
+            range: row.range || "",
+            service_code: ""
+
+        });
+
+    });
+
+    showNotice(
+        "Report loaded for editing."
+    );
+}
+
 
 function generateReportQR(){
 
@@ -3362,7 +3646,9 @@ function clientCopyPrint(){
 }
 
 
-function openWhatsAppChat(){
+async function openWhatsAppChat(){
+
+    await downloadPDF();
 
     let mobile =
         document.getElementById("patientMobile")
@@ -3391,23 +3677,23 @@ function openWhatsAppChat(){
         .trim();
 
     const message =
-    `Dear ${patientName},
+`Dear ${patientName},
 
-    Greetings from Rapid Labs.
+Greetings from Rapid Labs.
 
-    Your laboratory report has been completed and is ready for review.
+Your laboratory report has been completed and is ready for review.
 
-    Patient Name: ${patientName}
-    Report Number: ${reportNo}
-    Mobile Number: ${mobile}
+Patient Name: ${patientName}
+Report Number: ${reportNo}
+Mobile Number: ${mobile}
 
-    For any clarification regarding your report, please contact our team.
+For any clarification regarding your report, please contact our team.
 
-    Rapid Labs
-    Comprehensive Diagnostic Labs
-     +91 7975357102
+Rapid Labs
+Comprehensive Diagnostic Labs
++91 7829044698
 
-    Thank you for choosing Rapid Labs.`;
+Thank you for choosing Rapid Labs.`;
 
     window.open(
         `https://wa.me/${mobile}?text=${encodeURIComponent(message)}`,
@@ -4123,6 +4409,81 @@ loadReportData();
 
     </div>
 
+</div>
+
+<div class="floating-actions no-print">
+
+    <button class="btn-primary icon-btn"
+            onclick="printReport()"
+            title="Print">
+        <i class="fa-solid fa-print"></i>
+    </button>
+
+    <button class="btn-secondary icon-btn"
+            onclick="clientCopyPrint()"
+            title="Client Copy">
+        <i class="fa-solid fa-copy"></i>
+    </button>
+
+    <button class="btn-success icon-btn"
+            onclick="openWhatsAppChat()"
+            title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </button>
+
+    <button class="btn-danger icon-btn"
+            onclick="deleteUploadedReport()"
+            title="Delete">
+        <i class="fa-solid fa-trash"></i>
+    </button>
+
+</div>
+
+
+<div id="reportPickerModal"
+     style="
+        display:none;
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.4);
+        z-index:999999;
+        align-items:center;
+        justify-content:center;
+     ">
+
+    <div style="
+        width:600px;
+        max-width:90vw;
+        background:#fff;
+        border-radius:12px;
+        padding:20px;
+    ">
+
+        <h3>Select Saved Report</h3>
+
+        <input
+            id="reportSearch"
+            placeholder="Search Report No / Patient"
+            style="width:100%;padding:10px;"
+            oninput="filterReportList()"
+        >
+
+        <div
+            id="reportListBox"
+            style="
+                margin-top:15px;
+                max-height:400px;
+                overflow:auto;
+            ">
+        </div>
+
+    </div>
+
+</div>
+
+<div id="reportPickerModal" style="display:none;">
+    <input id="reportSearch">
+    <div id="reportListBox"></div>
 </div>
 
 
