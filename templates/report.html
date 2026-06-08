@@ -4518,7 +4518,32 @@ loadReportData();
         padding:20px;
     ">
 
-        <h3>Select Saved Report</h3>
+        <div style="
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+">
+
+    <h3 style="margin:0;">
+        Select Saved Report
+    </h3>
+
+    <button
+        onclick="document.getElementById('reportPickerModal').style.display='none'"
+        style="
+            border:none;
+            background:none;
+            font-size:24px;
+            cursor:pointer;
+            line-height:1;
+        "
+        title="Close"
+    >
+        ×
+    </button>
+
+</div>
 
         <input
             id="reportSearch"
