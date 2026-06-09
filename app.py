@@ -4461,6 +4461,23 @@ def report_list():
     cursor = conn.cursor()
 
     cursor.execute("""
+        CREATE TABLE IF NOT EXISTS report_entries (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            invoice_no TEXT,
+            barcode TEXT,
+            report_no TEXT,
+            patient_name TEXT,
+            patient_mobile TEXT,
+            client_name TEXT,
+            sample_type TEXT,
+            results_json TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    """)
+
+    conn.commit()
+
+    cursor.execute("""
         SELECT
             report_no,
             patient_name,
@@ -4477,6 +4494,8 @@ def report_list():
         dict(row)
         for row in rows
     ])
+
+    
 
 @app.route("/verify-report/<report_no>")
 def verify_report(report_no):
