@@ -419,19 +419,19 @@ button{
 }
 
 /* Logo box for clean medical feel */
+/* LOGO */
 .logo-box{
-    background:transparent;
-    padding:0;
-    border:none;
-    border-radius:0;
-    box-shadow:none;
+    background:#fff;
+    padding:5px 8px;
+    border-radius:6px;
+    border:1px solid #e5e7eb;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
 .logo-box img{
-    height:100px;
+    height:52px;
     width:auto;
     object-fit:contain;
 }
@@ -1274,7 +1274,7 @@ body.pdf-mode .report-box{
 }
 
 body.pdf-mode .report-page-one{
-    height:277mm !important;
+    min-height:250mm !important;
     padding:8px 12px !important;
 
     display:flex !important;
@@ -1715,22 +1715,6 @@ thead{
 
 }
 
-.report-comment,
-#narrativePrintBlock,
-.report-bottom-area{
-
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-
-}
-
-.keep-together{
-
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-
-}
-
 
 </style>
 </head>
@@ -1949,7 +1933,7 @@ thead{
         "
     ></div>
     </div>
-<div id="narrativePrintBlock"
+
 
 <div id="narrativePrintBlock" style="display:none;">
 
@@ -1991,15 +1975,11 @@ thead{
 
 </div>
 
-</div>
-
-    <div class="keep-together">
-
 
         <div id="reportComment"
              class="report-comment footer-clinical-note">
         </div>
-    </div>
+
     
 <div id="footerPushSpacer" class="footer-push-spacer"></div>
 
