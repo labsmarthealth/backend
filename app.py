@@ -383,23 +383,23 @@ def init_db():
         ))
 
 
-cursor.execute(
-"SELECT id FROM users WHERE email='shashikala@rl.com'"
-)
+    cursor.execute(
+    "SELECT id FROM users WHERE email='shashikala@rl.com'"
+    )
 
-staff = cursor.fetchone()
+    staff = cursor.fetchone()
 
-if not staff:
-    cursor.execute("""
-    INSERT INTO users
-    (name,email,password_hash,role)
-    VALUES (?,?,?,?)
-    """, (
-        "Shashikala",
-        "shashikala@rl.com",
-        "staff123",
-        "STAFF"
-    ))
+    if not staff:
+        cursor.execute("""
+        INSERT INTO users
+        (name,email,password_hash,role)
+        VALUES (?,?,?,?)
+        """, (
+            "Shashikala",
+            "shashikala@rl.com",
+            "staff123",
+            "STAFF"
+        ))
 
     conn.commit()
     conn.close()
