@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Task Dispatch - Rapid Labs</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    padding:25px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.page-title{
+    font-size:28px;
+    font-weight:700;
+    color:#0b3c6d;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.section-title{
+    font-size:16px;
+    font-weight:700;
+    margin-bottom:10px;
+    color:#0b3c6d;
+}
+
+textarea,
+input{
+    width:100%;
+    border:1px solid #dcdfe4;
+    border-radius:8px;
+    padding:12px;
+    font-size:14px;
+    outline:none;
+}
+
+textarea{
+    resize:vertical;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:15px;
+}
+
+.full{
+    grid-column:1 / -1;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:20px;
+}
+
+button,
+.action-link{
+
+    border:none;
+    border-radius:8px;
+    padding:12px 18px;
+    cursor:pointer;
+    text-decoration:none;
+    color:#fff;
+    font-size:14px;
+}
+
+.primary{
+    background:#0b63ce;
+}
+
+.success{
+    background:#16a34a;
+}
+
+.dark{
+    background:#1f2937;
+}
+
+.preview-box{
+    margin-top:20px;
+}
+
+#collectorMessage{
+    height:260px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-size:13px;
+    font-weight:600;
+    color:#374151;
+}
+
+@media(max-width:768px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="page-title">
+Task Dispatch
+</div>
+
+<div class="card">
+
+<div class="section-title">
+Paste Lead Details
+</div>
+
+<textarea
+id="leadText"
+rows="8"
+placeholder="Paste Meta Lead / WhatsApp Message / Call Notes Here">
+</textarea>
+
+<div class="buttons">
+
+<button
+class="primary"
+onclick="extractLead()">
+Extract Details
+</button>
+
+</div>
+
+<div
+id="output"
+style="display:none;">
+
+<div class="grid">
+
+<div>
+<label>Patient Name</label>
+<input id="pName">
+</div>
+
+<div>
+<label>Age</label>
+<input id="pAge">
+</div>
+
+<div>
+<label>Mobile Number</label>
+<input id="pMobile">
+</div>
+
+<div>
+<label>Tests</label>
+<input id="pTests">
+</div>
+
+<div class="full">
+<label>Address</label>
+
+<textarea
+id="pLocation"
+rows="4"></textarea>
+</div>
+
+</div>
+
+<div class="buttons">
+
+<button
+class="primary"
+onclick="generateMessage()">
+Generate Collector Message
+</button>
+
+<button
+class="dark"
+onclick="copyTask()">
+Copy Message
+</button>
+
+<button
+class="success"
+onclick="openWhatsapp()">
+WhatsApp
+</button>
+
+<a
+id="mapsLink"
+class="action-link success"
+target="_blank">
+Open Maps
+</a>
+
+</div>
+
+<div class="preview-box">
+
+<div class="section-title">
+Collector Message Preview
+</div>
+
+<textarea
+id="collectorMessage">
+</textarea>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function extractLead(){
+
+    const text =
+        document.getElementById(
+            "leadText"
+        ).value;
+
+    document.getElementById(
+        "output"
+    ).style.display = "block";
+
+    const mobileMatch =
+        text.match(/\b\d{10}\b/);
+
+    if(mobileMatch){
+        pMobile.value =
+            mobileMatch[0];
+    }
+
+    const ageMatch =
+        text.match(/\bAge\s*[:\-]?\s*(\d+)/i);
+
+    if(ageMatch){
+        pAge.value =
+            ageMatch[1];
+    }
+
+    const lines =
+        text.split("\n");
+
+    let addressFound = false;
+    let addressText = "";
+
+    lines.forEach(line => {
+
+        const lower =
+            line.toLowerCase();
+
+        if(
+            lower.includes("name")
+        ){
+            const value =
+                line.split(/:|-/);
+
+            if(value[1]){
+                pName.value =
+                    value[1].trim();
+            }
+        }
+
+        if(
+            lower.includes("test")
+        ){
+            const value =
+                line.split(/:|-/);
+
+            if(value[1]){
+                pTests.value =
+                    value[1].trim();
+            }
+        }
+
+        if(
+            lower.includes("address")
+        ){
+            addressFound = true;
+
+            addressText +=
+                line
+                .replace(/address/i,"")
+                .replace(":","")
+                .replace("-","")
+                .trim()
+                + "\n";
+
+            return;
+        }
+
+        if(addressFound){
+            addressText +=
+                line + "\n";
+        }
+
+    });
+
+    if(addressText.trim()){
+        pLocation.value =
+            addressText.trim();
+    }
+
+    updateMap();
+}
+
+function updateMap(){
+
+    const location =
+        document.getElementById(
+            "pLocation"
+        ).value;
+
+    document.getElementById(
+        "mapsLink"
+    ).href =
+        "https://www.google.com/maps/search/?api=1&query="
+        + encodeURIComponent(location);
+}
+
+function generateMessage(){
+
+    updateMap();
+
+    const msg =
+
+`🏥 RAPID LABS
+
+HOME COLLECTION TASK
+
+Patient Name:
+${pName.value}
+
+Age:
+${pAge.value}
+
+Mobile:
+${pMobile.value}
+
+Tests:
+${pTests.value}
+
+Address:
+${pLocation.value}
+
+Google Maps:
+${mapsLink.href}
+
+Please collect sample and update status after collection.
+`;
+
+    document.getElementById(
+        "collectorMessage"
+    ).value = msg;
+}
+
+function copyTask(){
+
+    generateMessage();
+
+    navigator.clipboard.writeText(
+        document.getElementById(
+            "collectorMessage"
+        ).value
+    );
+
+    alert("Message copied");
+}
+
+function openWhatsapp(){
+
+    generateMessage();
+
+    const msg =
+        encodeURIComponent(
+            document.getElementById(
+                "collectorMessage"
+            ).value
+        );
+
+    window.open(
+        "https://wa.me/?text=" + msg,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>

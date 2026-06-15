@@ -382,6 +382,25 @@ def init_db():
             "ADMIN"
         ))
 
+
+cursor.execute(
+"SELECT id FROM users WHERE email='shashikala@rl.com'"
+)
+
+staff = cursor.fetchone()
+
+if not staff:
+    cursor.execute("""
+    INSERT INTO users
+    (name,email,password_hash,role)
+    VALUES (?,?,?,?)
+    """, (
+        "Shashikala",
+        "shashikala@rl.com",
+        "staff123",
+        "STAFF"
+    ))
+
     conn.commit()
     conn.close()
 
@@ -5033,6 +5052,13 @@ def scan_page():
 @app.route("/client/lab-dashboard")
 def client_lab_dashboard():
     return render_template("client_lab_dashboard.html")
+
+
+@app.route("/task-dispatch")
+def task_dispatch():
+    return render_template("task_dispatch.html")
+
+
 
 
 # ==============================

@@ -96,6 +96,7 @@ body{
 <li onclick="openPayments()">Payments</li>
 <li onclick="openAccounts()">Accounts</li>
 <li onclick="openClients()">Clients</li>
+<li onclick="openTaskDispatch()">Task Dispatch</li>
 <li onclick="openStaff()">Staff</li>
 
 </ul>
@@ -169,6 +170,11 @@ window.location.href="/sample-collection?role=admin";
 function openClients(){
     window.location.href="/clients";
 }
+
+function openTaskDispatch(){
+    window.location.href = "/task-dispatch";
+}
+
 
 
 /* LOAD DASHBOARD DATA */
