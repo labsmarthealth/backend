@@ -419,19 +419,19 @@ button{
 }
 
 /* Logo box for clean medical feel */
+/* LOGO */
 .logo-box{
-    background:transparent;
-    padding:0;
-    border:none;
-    border-radius:0;
-    box-shadow:none;
+    background:#fff;
+    padding:5px 8px;
+    border-radius:6px;
+    border:1px solid #e5e7eb;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
 .logo-box img{
-    height:100px;
+    height:52px;
     width:auto;
     object-fit:contain;
 }
@@ -785,21 +785,6 @@ body.modal-open{
 .structured-value{
 
     background:#fffefc;
-    position:relative;
-
-}
-
-.structured-suggestions{
-
-    position:absolute;
-    background:#fff;
-    border:1px solid #ddd;
-    border-radius:8px;
-    max-height:180px;
-    overflow-y:auto;
-    z-index:99999;
-    width:100%;
-    box-shadow:0 6px 18px rgba(0,0,0,.12);
 
 }
 
@@ -1274,7 +1259,7 @@ body.pdf-mode .report-box{
 }
 
 body.pdf-mode .report-page-one{
-    height:277mm !important;
+    min-height:250mm !important;
     padding:8px 12px !important;
 
     display:flex !important;
@@ -1715,22 +1700,6 @@ thead{
 
 }
 
-.report-comment,
-#narrativePrintBlock,
-.report-bottom-area{
-
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-
-}
-
-.keep-together{
-
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
-
-}
-
 
 </style>
 </head>
@@ -1919,14 +1888,6 @@ thead{
     + Structured Report
 </button>
 
-<button
-    onclick="openNarrativeModal()"
-    class="structured-btn"
-    style="margin-right:8px;"
->
-    + Narrative Note
-</button>
-
 <button class="btn-warning" onclick="undoDelete()">
     Undo
 </button>
@@ -1949,57 +1910,11 @@ thead{
         "
     ></div>
     </div>
-<div id="narrativePrintBlock"
-
-<div id="narrativePrintBlock" style="display:none;">
-
-    <div class="structured-actions no-print">
-
-        <button
-            class="structured-edit-btn"
-            onclick="openNarrativeModal()">
-            Edit
-        </button>
-
-        <button
-            class="structured-delete-btn"
-            onclick="deleteNarrativeNote()">
-            Delete
-        </button>
-
-    </div>
-
-    <div
-        id="narrativePrintTitle"
-        style="
-            font-size:18px;
-            font-weight:700;
-            text-align:center;
-            margin:20px 0 12px;
-            text-decoration:underline;
-        ">
-    </div>
-
-    <div
-        id="narrativePrintContent"
-        style="
-            white-space:pre-line;
-            line-height:1.9;
-            font-size:14px;
-        ">
-    </div>
-
-</div>
-
-</div>
-
-    <div class="keep-together">
-
 
         <div id="reportComment"
              class="report-comment footer-clinical-note">
         </div>
-    </div>
+
     
 <div id="footerPushSpacer" class="footer-push-spacer"></div>
 
@@ -2196,33 +2111,6 @@ let selectedSample = null;
 let uploadedReport = null;
 let allTests = [];
 let deletedRows = [];
-
-let narrativeNote = {
-    title:"",
-    content:""
-};
-const narrativeTemplates = {
-
-    peripheral_smear: {
-
-        title:
-            "PERIPHERAL SMEAR REPORT",
-
-        content:
-`The RBCs are normocytic normochromic.
-
-The WBCs total and differential counts as estimated by the inspection of the smear conform to those given.
-
-Platelets are adequate.
-
-M.P. and M.F. Negative.
-
-IMPRESSION : Normocytic normochromic blood picture.`
-
-    }
-
-};
-
 
 function loadTestMaster(){
 
@@ -3213,9 +3101,7 @@ async function saveReport(){
         patient_mobile: document.getElementById("patientMobile").value,
         client_name: document.getElementById("clientName").value,
         sample_type: document.getElementById("sampleType").value,
-        results: collectReportData(),
-
-        narrative_note: narrativeNote
+        results: collectReportData()
     };
 
     try{
@@ -3229,8 +3115,6 @@ async function saveReport(){
         if(data.success){
 
             showNotice("Report saved successfully.");
-
-            await downloadPDF();
 
         }else{
 
@@ -3399,6 +3283,7 @@ async function loadSavedReport(reportNo){
     // call your existing edit loader
     await loadReportForEdit(reportNo);
 }
+
 async function loadReportForEdit(reportNo){
 
     const res = await fetch(
@@ -3485,53 +3370,6 @@ async function loadReportForEdit(reportNo){
 
     });
 
-    /* =========================
-       LOAD NARRATIVE NOTE
-    ========================== */
-
-    narrativeNote =
-        data.narrative_note || {
-            title:"",
-            content:""
-        };
-
-    const narrativeBlock =
-        document.getElementById(
-            "narrativePrintBlock"
-        );
-
-    if(
-        narrativeNote &&
-        narrativeNote.content
-    ){
-
-        document.getElementById(
-            "narrativePrintTitle"
-        ).innerText =
-            narrativeNote.title || "";
-
-        document.getElementById(
-            "narrativePrintContent"
-        ).innerText =
-            narrativeNote.content || "";
-
-        narrativeBlock.style.display =
-            "block";
-
-    }else{
-
-        document.getElementById(
-            "narrativePrintTitle"
-        ).innerText = "";
-
-        document.getElementById(
-            "narrativePrintContent"
-        ).innerText = "";
-
-        narrativeBlock.style.display =
-            "none";
-    }
-
     showNotice(
         "Report loaded for editing."
     );
@@ -3598,7 +3436,7 @@ async function printReport(){
             el.style.display = "";
         });
 
-    saveReport();
+    
 
 }
 
@@ -3701,7 +3539,9 @@ async function downloadPDF(){
                 "Report saved with QR verification."
             );
 
-        }else{
+        }
+        
+        else{
 
             showNotice(
                 data.message ||
@@ -4275,147 +4115,6 @@ const structuredTemplates = {
     }
 
 };
-const structuredFieldSuggestions = {
-
-    "Quantity":[
-        "Not Found",
-        "Adequate",
-        "Scanty",
-        "Moderate",
-        "Profuse"
-    ],
-
-    "Colour":[
-        "Yellow",
-        "Pale Yellow",
-        "Dark Yellow",
-        "Amber",
-        "Not Found",
-        "Straw Coloured"
-    ],
-
-    "Transparency":[
-        "Not Found",
-        "Clear",
-        "Slightly Turbid",
-        "Turbid"
-    ],
-
-    "Reaction":[
-        "Not Found",
-        "Acidic",
-        "Alkaline",
-        "Neutral"
-    ],
-
-    "Albumin":[
-        "Not Found",
-        "Nil",
-        "Trace",
-        "+",
-        "++",
-        "+++",
-        "++++"
-    ],
-
-    "Sugar":[
-        "Not Found",
-        "Nil",
-        "Trace",
-        "+",
-        "++",
-        "+++",
-        "++++"
-    ],
-
-    "Bile Salt":[
-        "Not Found",
-        "Nil",
-        "Present"
-    ],
-
-    "Bile Pigment":[
-        "Nil",
-        "Not Found",
-        "Present"
-    ],
-
-    "Epithelial Cells":[
-        "Nil",
-        "Few",
-        "Moderate",
-        "Many",
-        "Not Found",
-        "0-0 / hpf",
-        "0-1 / hpf",
-        "1-2 / hpf",
-        "2-4 / hpf",
-        "4-6 / hpf"
-    ],
-
-    "Pus Cells":[
-        "Nil",
-        "Few",
-        "Moderate",
-        "Many",
-        "0-0 / hpf",
-        "0-1 / hpf",
-        "1-2 / hpf",
-        "2-4 / hpf",
-        "4-6 / hpf",
-        "6-8 / hpf",
-        "Not Found",
-        "8-10 / hpf"
-    ],
-
-    "RBCs":[
-        "Not Found",
-        "Nil",
-        "Few",
-        "Moderate",
-        "Many",
-        "0-0 / hpf",
-        "0-1 / hpf",
-        "1-2 / hpf",
-        "2-4 / hpf",
-        "4-6 / hpf"
-    ],
-
-    "Cast":[
-        "Not Found",
-        "Nil",
-        "Absent",
-        "Present",
-        "Few",
-        "Many"
-    ],
-
-    "Crystals":[
-        "Not Found",
-        "Nil",
-        "Absent",
-        "Present",
-        "Few",
-        "Many"
-    ],
-
-    "Bacteria":[
-        "Not Found",
-        "Nil",
-        "Absent",
-        "Present",
-        "Few",
-        "Moderate",
-        "Many"
-    ],
-
-    "Other":[
-        "Nil",
-        "Not Found",
-        "Absent",
-        "Present"
-    ]
-};
 
 function openStructuredModal(testName){
 
@@ -4449,15 +4148,6 @@ function openStructuredModal(testName){
 
         fields.forEach(field => {
 
-            const suggestions =
-                (structuredFieldSuggestions[field] || [])
-                .map(v => `<option value="${v}">`)
-                .join("");
-
-            const listId =
-                "suggestion_" +
-                field.replace(/\s+/g,"_");
-
             html += `
 
                 <div class="structured-row">
@@ -4470,13 +4160,7 @@ function openStructuredModal(testName){
                     <input
                         class="structured-value"
                         placeholder="Value"
-                        list="${listId}"
-                        autocomplete="off"
                     >
-
-                    <datalist id="${listId}">
-                        ${suggestions}
-                    </datalist>
 
                 </div>
             `;
@@ -4489,10 +4173,9 @@ function openStructuredModal(testName){
 
     modal.style.display = "flex";
 
-    document.body.classList.add(
-        "modal-open"
-    );
+    document.body.classList.add("modal-open");
 }
+
 
 function closeStructuredModal(){
 
@@ -4754,113 +4437,6 @@ function editStructuredBlock(btn){
 }
 
 
-
-function openNarrativeModal(){
-
-    document.body.classList.add("modal-open");
-
-    document.getElementById("narrativeModal").style.display = "flex";
-
-    document.getElementById("narrativeTitle").value =
-        narrativeNote.title || "";
-
-    document.getElementById("narrativeContent").value =
-        narrativeNote.content || "";
-}
-
-function closeNarrativeModal(){
-
-    document.body.classList.remove("modal-open");
-
-    document.getElementById("narrativeModal").style.display = "none";
-}
-
-function saveNarrativeNote(){
-
-    narrativeNote.title =
-        document.getElementById("narrativeTitle").value.trim();
-
-    narrativeNote.content =
-        document.getElementById("narrativeContent").value.trim();
-
-    const block =
-        document.getElementById("narrativePrintBlock");
-
-    if(!narrativeNote.content){
-
-        block.style.display = "none";
-
-    }else{
-
-        document.getElementById(
-            "narrativePrintTitle"
-        ).innerText = narrativeNote.title;
-
-        document.getElementById(
-            "narrativePrintContent"
-        ).innerText = narrativeNote.content;
-
-        block.style.display = "block";
-    }
-
-    closeNarrativeModal();
-}
-
-
-function deleteNarrativeNote(){
-
-    if(!confirm("Delete Narrative Note?")){
-        return;
-    }
-
-    narrativeNote = {
-        title:"",
-        content:""
-    };
-
-    document.getElementById(
-        "narrativePrintTitle"
-    ).innerText = "";
-
-    document.getElementById(
-        "narrativePrintContent"
-    ).innerText = "";
-
-    document.getElementById(
-        "narrativePrintBlock"
-    ).style.display = "none";
-}
-
-function loadNarrativeTemplate(){
-
-    const template =
-        document.getElementById(
-            "narrativeTemplate"
-        ).value;
-
-    if(!template){
-        return;
-    }
-
-    const data =
-        narrativeTemplates[template];
-
-    if(!data){
-        return;
-    }
-
-    document.getElementById(
-        "narrativeTitle"
-    ).value =
-        data.title;
-
-    document.getElementById(
-        "narrativeContent"
-    ).value =
-        data.content;
-}
-
-
 loadTestMaster();
 loadReportData();
 </script>
@@ -5032,83 +4608,6 @@ loadReportData();
                 max-height:400px;
                 overflow:auto;
             ">
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<div id="narrativeModal" class="structured-modal">
-
-    <div class="structured-box">
-
-        <div class="structured-head">
-            <h3>Narrative Note</h3>
-
-            <button
-                class="btn-danger"
-                onclick="closeNarrativeModal()">
-                Close
-            </button>
-        </div>
-
-        <select
-    id="narrativeTemplate"
-    onchange="loadNarrativeTemplate()"
-    style="
-        width:100%;
-        padding:10px;
-        margin-bottom:12px;
-        border:1px solid #ddd;
-        border-radius:8px;
-    "
->
-    <option value="">
-        Select Template
-    </option>
-
-    <option value="peripheral_smear">
-        Peripheral Smear Report
-    </option>
-</select>
-
-
-
-        <input
-            id="narrativeTitle"
-            placeholder="Title (Example: PERIPHERAL SMEAR REPORT)"
-            style="
-                width:100%;
-                padding:10px;
-                margin-top:12px;
-                border:1px solid #ddd;
-                border-radius:8px;
-            "
-        >
-
-        <textarea
-            id="narrativeContent"
-            placeholder="Enter report note..."
-            style="
-                width:100%;
-                height:300px;
-                margin-top:12px;
-                border:1px solid #ddd;
-                border-radius:8px;
-                padding:12px;
-            "
-        ></textarea>
-
-        <div style="margin-top:12px;text-align:right;">
-
-            <button
-                class="btn-success"
-                onclick="saveNarrativeNote()">
-                Save Note
-            </button>
-
         </div>
 
     </div>

@@ -4309,6 +4309,7 @@ def send_report_to_client():
 def uploaded_file(filename):
     return send_from_directory(UPLOAD_FOLDER, filename)
 
+
 @app.route("/api/save-report-pdf", methods=["POST"])
 def save_report_pdf():
 

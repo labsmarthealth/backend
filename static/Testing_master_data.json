@@ -2,7 +2,7 @@
  {
   "test_name": "Hemoglobin",
   "unit": "gms/dL",
-  "reference_range": "Birth: 18.0+/-4.0\nDay 3: 18.0+/-3.0\n1 month 14.0+/-2.5 2 months 11.2+/-1.8\n3 months-6years: 12.6 +/-1.5\n6-12 years: 13.5 +/-2.0 Adults: M:135-18 gms\\dl F11.5-16 gms dl",
+  "reference_range": "Birth\t18.0 ± 4.0 g/dL\nDay 3\t18.0 ± 3.0 g/dL\n1 Month\t14.0 ± 2.5 g/dL\n2 Months\t11.2 ± 1.8 g/dL\n3 Months - 6 Years\t12.6 ± 1.5 g/dL\n6 - 12 Years\t13.5 ± 2.0 g/dL\nAdult Male\t13.5 - 18.0 g/dL\nAdult Female\t11.5 - 16.0 g/dL",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -13,7 +13,7 @@
  {
   "test_name": "WBC Count",
   "unit": "cells /cumm",
-  "reference_range": "4000-11000cells cumm",
+  "reference_range": "4000-11000 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -35,7 +35,7 @@
  {
   "test_name": "Basophil",
   "unit": "%",
-  "reference_range": "00-01%",
+  "reference_range": "00-01",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -46,7 +46,7 @@
  {
   "test_name": "Eosinophil",
   "unit": "%",
-  "reference_range": "00-06%",
+  "reference_range": "00-06",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -57,7 +57,7 @@
  {
   "test_name": "Monocyte",
   "unit": "%",
-  "reference_range": "01-10 %",
+  "reference_range": "01-10",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -79,7 +79,7 @@
  {
   "test_name": "RBC Count",
   "unit": "cumm",
-  "reference_range": "3.5-55 million cumm",
+  "reference_range": "3.5-5.5 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -89,8 +89,8 @@
  },
  {
   "test_name": "Platelet Count",
-  "unit": "cum",
-  "reference_range": "1.5-4.5 lakhs cum",
+  "unit": "lakhs/cum",
+  "reference_range": "1.5-4.5 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -191,31 +191,9 @@
   "method": "Manual Microscopy"
  },
  {
-  "test_name": "Absolute Band Count",
-  "unit": "/UL",
-  "reference_range": "Adults: 0 - 700 /UL",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated",
-  "display_order": 16
- },
- {
-  "test_name": "Absolute Lymphocyte Count",
-  "unit": "%",
-  "reference_range": "Adults 20-40% New born: 25-35% Child<4yrs: 35-65% Child 4-10yrs: 30-50%",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated",
-  "display_order": 17
- },
- {
   "test_name": "Absolute Eosinophil Count (AEC)",
   "unit": "cells /cumm",
-  "reference_range": "40 - 440 cells cumm",
+  "reference_range": "40 - 440 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -266,7 +244,7 @@
   "method": "Manual Microscopy"
  },
  {
-  "test_name": "DIFFERENTIAL COUNT POLYMORPHS",
+  "test_name": "DIFFERENTIAL COUNT: POLYMORPHS",
   "unit": "%",
   "reference_range": "Adults: 40-75 % New born: 30-60 % Child 47:25-45% Child 4-10yrs 30-60%",
   "category": "Haematology",
@@ -318,7 +296,7 @@
  {
   "test_name": "PACKED CELL VOLUME",
   "unit": "%",
-  "reference_range": "40-48%",
+  "reference_range": "40-48",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -383,7 +361,7 @@
  {
   "test_name": "MCH",
   "unit": "pc",
-  "reference_range": "30-32 pc",
+  "reference_range": "30-32 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -394,7 +372,7 @@
  {
   "test_name": "MCHC",
   "unit": "%",
-  "reference_range": "32-36 %",
+  "reference_range": "32-36",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
@@ -405,24 +383,13 @@
  {
   "test_name": "MCV",
   "unit": "um3",
-  "reference_range": "77-93 um3",
+  "reference_range": "77-93 ",
   "category": "Haematology",
   "panel": "CBC",
   "panel_display": "COMPLETE BLOOD COUNT (CBC)",
   "department": "DEPARTMENT OF HAEMATOLOGY",
   "method": "Calculated",
   "display_order": 14
- },
- {
-  "test_name": "MPV (Mean Platelet Volume)",
-  "unit": "fL",
-  "reference_range": "MPV (Mean Platelet Volume) → Adults: 7 - 11 fL",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated",
-  "display_order": 18
  },
  {
   "test_name": "Osmotic Fragility Test",
@@ -474,17 +441,6 @@
   "department": "DEPARTMENT OF HAEMATOLOGY",
   "method": "Automated",
   "display_order": 19
- },
- {
-  "test_name": "RDW",
-  "unit": "%",
-  "reference_range": "Adults: 11.5 - 14.5 %",
-  "category": "Haematology",
-  "panel": "CBC",
-  "panel_display": "COMPLETE BLOOD COUNT (CBC)",
-  "department": "DEPARTMENT OF HAEMATOLOGY",
-  "method": "Automated",
-  "display_order": 20
  },
  {
   "test_name": "Reticulocyte Count",
@@ -3788,14 +3744,6 @@
   "method": "Cytology"
  },
  {
-  "test_name": "1,25 Dihydroxy Vitamin D",
-  "unit": "pg/mL",
-  "reference_range": "Adults: 20 - 60 pg/mL",
-  "category": "Biochemistry",
-  "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "CLIA"
- },
- {
   "test_name": "17 Hydroxy Progesterone",
   "unit": "ng/mL",
   "reference_range": "Follicular Phase: 0.2 - 1.3 ng/mL",
@@ -3836,8 +3784,8 @@
  },
  {
   "test_name": "25 Hydroxy Vitamin D",
-  "unit": "ng/mL",
-  "reference_range": "Deficiency: <20 ng/mL<br>Sufficiency: 30 - 100 ng/mL",
+  "unit": "pg/mL",
+  "reference_range": "Deficiency: <20 insufficient :20-29<br>Sufficiency: 30 - 100 </br> potential toxicity >100 ",
   "category": "Biochemistry",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "CLIA"
@@ -4045,7 +3993,7 @@
  {
   "test_name": "Alkaline Phosphatase (ALP)",
   "unit": "U/L",
-  "reference_range": "Adults: 44 - 147 U/L",
+  "reference_range": "Children\t104 - 390 IU/L\nAdults\t25 - 140 IU/L",
   "category": "Biochemistry",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -4537,7 +4485,7 @@
  {
   "test_name": "CA-125",
   "unit": "U/mL",
-  "reference_range": "Adults: <35 U/mL",
+  "reference_range": "1.9-16.3",
   "category": "Tumor Marker",
   "department": "DEPARTMENT OF ONCOLOGY",
   "method": "CLIA"
@@ -4679,7 +4627,7 @@
  {
   "test_name": "HDL Cholesterol",
   "unit": "mg/dL",
-  "reference_range": "Male: Above 40 mg/dL<br>Female: Above 50 mg/dL",
+  "reference_range": "No Risk\tFemale: > 65 mg/dL\tMale: > 55 mg/dL\nModerate Risk\tFemale: 45 - 65 mg/dL\tMale: 35 - 55 mg/dL\nHigh Risk\tFemale: < 45 mg/dL\tMale: < 35 mg/dL",
   "category": "Biochemistry",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
@@ -5061,7 +5009,7 @@
  {
   "test_name": "Fasting Blood Sugar",
   "unit": "mg/dL",
-  "reference_range": "Normal: 70 - 100 mg/dL",
+  "reference_range": "Normal: 60 - 110 mg/dL",
   "category": "Biochemistry",
   "panel": "DIABETIC",
   "panel_display": "DIABETIC PROFILE",
@@ -5157,7 +5105,7 @@
  {
   "test_name": "FSH",
   "unit": "mIU/mL",
-  "reference_range": "Male: 1.5 - 12.4 mIU/mL<br>Female Follicular: 3.5 - 12.5 mIU/mL",
+  "reference_range": "Female - Follicular Phase\t1.5 - 10.2 mIU/mL\nFemale - Mid Cycle Peak\t3.4 - 33.4 mIU/mL\nFemale - Luteal Phase\t1.5 - 9.1 mIU/mL\nFemale - Pregnant\t< 0.31 mIU/mL\nFemale - Post Menopausal\t23.0 - 116.3 mIU/mL\nMale (13 - 70 Years)\t1.4 - 18.1 mIU/mL",
   "category": "Endocrinology",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
   "method": "CLIA"
@@ -5165,7 +5113,7 @@
  {
   "test_name": "Free T3",
   "unit": "pg/mL",
-  "reference_range": "Adults: 2.0 - 4.4 pg/mL",
+  "reference_range": "Child & Adults\t2.1 - 4.4\nPregnancy\t2.0 - 3.8",
   "category": "Endocrinology",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
@@ -5176,7 +5124,7 @@
  {
   "test_name": "Free T4",
   "unit": "ng/dL",
-  "reference_range": "Adults: 0.8 - 1.8 ng/dL",
+  "reference_range": "Newborns (1 - 4 Days)\t2.0 - 5.3\nChildren (2 Weeks - 20 Years)\t0.8 - 2.0\nAdults\t0.8 - 2.7\nFirst Trimester\t0.7 - 2.0\n2nd & 3rd Trimesters\t0.5 - 1.6",
   "category": "Endocrinology",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
@@ -5279,12 +5227,13 @@
  {
   "test_name": "HbA1c",
   "unit": "%",
-  "reference_range": "Normal: Below 5.7 %<br>Prediabetic: 5.7 - 6.4 %<br>Diabetic: Above 6.5 %",
+  "reference_range": "Non Diabetic Level\t< 6 %\nDiabetic - Good\t6 - 7 %\nDiabetic - Fair\t7 - 8 %\nDiabetic - Poor\t> 8 %",
   "category": "Biochemistry",
   "panel": "HbA1c",
   "panel_display": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "HPLC"
+  "method": "HPLC",
+  "display_order": 1
  },
  {
   "test_name": "HE4",
@@ -5648,7 +5597,7 @@
  {
   "test_name": "LDL Cholesterol",
   "unit": "mg/dL",
-  "reference_range": "Optimal: Below 100 mg/dL",
+  "reference_range": "Optimal\t< 100 mg/dL\nNear Optimal\t100 - 129 mg/dL\nBorderline High\t130 - 159 mg/dL\nHigh\t160 - 189 mg/dL\nVery High\t> 190 mg/dL",
   "category": "Biochemistry",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
@@ -5698,7 +5647,7 @@
  {
   "test_name": "LH",
   "unit": "mIU/mL",
-  "reference_range": "Male: 1.7 - 8.6 mIU/mL<br>Female Follicular: 2.4 - 12.6 mIU/mL",
+  "reference_range": "Female - Follicular Phase\t1.9 - 12.5 mIU/mL\nFemale - Mid Cycle Peak\t8.7 - 76.3 mIU/mL\nFemale - Luteal Phase\t0.5 - 16.9 mIU/mL\nFemale - Pregnant\t0.1 - 1.5 mIU/mL\nFemale - Post Menopausal\t15.9 - 54.0 mIU/mL\nMale (20 - 70 Years)\t1.5 - 9.3 mIU/mL\nMale (> 70 Years)\t3.1 - 34.6 mIU/mL",
   "category": "Endocrinology",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
   "method": "CLIA"
@@ -5714,7 +5663,7 @@
  {
   "test_name": "Total Cholesterol",
   "unit": "mg/dL",
-  "reference_range": "Desirable: Below 200 mg/dL",
+  "reference_range": "Desirable\tLess than 200 mg/dL\nBorderline High\t200 - 239 mg/dL\nHigh\tMore than 239 mg/dL",
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
@@ -5722,9 +5671,9 @@
   "method": "CHOD-PAP"
  },
  {
-  "test_name": "Triglycerides",
+  "test_name": "Serum Triglycerides",
   "unit": "mg/dL",
-  "reference_range": "Normal: <150 mg/dL",
+  "reference_range": "Normal\tLess than 150 mg/dL\nBorderline High\t150 - 199 mg/dL\nHigh\t200 - 499 mg/dL\nVery High\tMore than 500 mg/dL",
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
@@ -5734,16 +5683,7 @@
  {
   "test_name": "VLDL Cholesterol",
   "unit": "mg/dL",
-  "reference_range": "Normal: 5 - 40 mg/dL",
-  "category": "Panel",
-  "panel": "LIPID",
-  "panel_display": "LIPID PROFILE",
-  "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "Calculated"
- },
- {
-  "test_name": "Total Cholesterol/HDL Ratio",
-  "reference_range": "Ideal: <5",
+  "reference_range": "Normal\t< 40 mg/dL",
   "category": "Panel",
   "panel": "LIPID",
   "panel_display": "LIPID PROFILE",
@@ -5768,7 +5708,7 @@
  {
   "test_name": "Bilirubin Total",
   "unit": "mg/dL",
-  "reference_range": "Adults: 0.2 - 1.2 mg/dL",
+  "reference_range": "0.2 - 1.2 mg/dL",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5778,7 +5718,7 @@
  {
   "test_name": "Bilirubin Direct",
   "unit": "mg/dL",
-  "reference_range": "Adults: 0 - 0.3 mg/dL",
+  "reference_range": "0.0 - 0.25 mg/dL",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5798,7 +5738,7 @@
  {
   "test_name": "SGOT (AST)",
   "unit": "U/L",
-  "reference_range": "Adults: 10 - 40 U/L",
+  "reference_range": "0 - 35 U/L",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5808,17 +5748,7 @@
  {
   "test_name": "SGPT (ALT)",
   "unit": "U/L",
-  "reference_range": "Adults: 7 - 56 U/L",
-  "category": "Panel",
-  "panel": "LFT",
-  "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "IFCC"
- },
- {
-  "test_name": "Gamma GT (GGT)",
-  "unit": "U/L",
-  "reference_range": "Adults Male: 8 - 61 U/L<br>Female: 5 - 36 U/L",
+  "reference_range": "0 - 40 U/L",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5828,7 +5758,7 @@
  {
   "test_name": "Total Protein",
   "unit": "g/dL",
-  "reference_range": "Adults: 6.0 - 8.3 g/dL",
+  "reference_range": "6.6 - 8.3 g/dL",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5838,7 +5768,7 @@
  {
   "test_name": "Albumin",
   "unit": "g/dL",
-  "reference_range": "Adults: 3.5 - 5.0 g/dL",
+  "reference_range": "3.5 - 5.0 g/dL",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -5848,16 +5778,7 @@
  {
   "test_name": "Globulin",
   "unit": "g/dL",
-  "reference_range": "Adults: 2.0 - 3.5 g/dL",
-  "category": "Panel",
-  "panel": "LFT",
-  "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "DEPARTMENT OF BIOCHEMISTRY",
-  "method": "Calculated"
- },
- {
-  "test_name": "A/G Ratio",
-  "reference_range": "Normal: 1.0 - 2.2",
+  "reference_range": "2.0 - 3.5 g/dL",
   "category": "Panel",
   "panel": "LFT",
   "panel_display": "LIVER FUNCTION TEST (LFT)",
@@ -6267,7 +6188,7 @@
  {
   "test_name": "PPBS",
   "unit": "mg/dL",
-  "reference_range": "Normal: Below 140 mg/dL",
+  "reference_range": "Normal: 80-140 mg/dL",
   "category": "Biochemistry",
   "panel": "DIABETIC",
   "panel_display": "DIABETIC PROFILE",
@@ -6355,7 +6276,7 @@
  {
   "test_name": "Random Blood Sugar",
   "unit": "mg/dL",
-  "reference_range": "Normal: 70 - 140 mg/dL",
+  "reference_range": "Normal: 80 - 150 mg/dL",
   "category": "Biochemistry",
   "panel": "DIABETIC",
   "panel_display": "DIABETIC PROFILE",
@@ -6373,60 +6294,60 @@
  {
   "test_name": "Urea",
   "unit": "mg/dL",
-  "reference_range": "Adults: 15 - 45 mg/dL",
+  "reference_range": "Blood Urea\t10 - 50 mg/dL",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "Urease-GLDH"
  },
  {
-  "test_name": "Creatinine",
+  "test_name": "Serum Creatinine",
   "unit": "mg/dL",
-  "reference_range": "Adults Male: 0.7 - 1.3 mg/dL<br>Female: 0.6 - 1.1 mg/dL",
+  "reference_range": "Cord Blood\t0.6 - 1.2 mg/dL\nNewborn (1 - 4 Days)\t0.3 - 1.0 mg/dL\nInfant\t0.2 - 0.4 mg/dL\nChild\t0.3 - 0.7 mg/dL\nAdolescent\t0.5 - 1.0 mg/dL\nAdult Males (18 - 60 Years)\t0.9 - 1.3 mg/dL\nAdult Males (60 - 90 Years)\t0.8 - 1.3 mg/dL\nAdult Males (> 90 Years)\t1.0 - 1.7 mg/dL\nAdult Females (18 - 60 Years)\t0.6 - 1.1 mg/dL\nAdult Females (60 - 90 Years)\t0.6 - 1.2 mg/dL\nAdult Females (> 90 Years)\t0.6 - 1.3 mg/dL",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "Jaffe"
  },
  {
-  "test_name": "Uric Acid",
+  "test_name": "Serum Uric Acid",
   "unit": "mg/dL",
-  "reference_range": "Adults Male: 3.4 - 7.0 mg/dL<br>Female: 2.4 - 6.0 mg/dL",
+  "reference_range": "Male\t3.4 - 7.0 mg/dL\nFemale\t2.4 - 5.7 mg/dL",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "Uricase"
  },
  {
   "test_name": "Sodium",
   "unit": "mEq/L",
-  "reference_range": "Adults: 135 - 145 mmol/L",
+  "reference_range": "Sodium\t136 - 145 mEq/L",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "ISE"
  },
  {
   "test_name": "Potassium",
   "unit": "mEq/L",
-  "reference_range": "Adults: 3.5 - 5.1 mmol/L",
+  "reference_range": "Potassium\t3.5 - 5.1 mEq/L",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "ISE"
  },
  {
   "test_name": "Chloride",
   "unit": "mEq/L",
-  "reference_range": "Adults: 98 - 106 mmol/L",
+  "reference_range": "Chloride\t98 - 107 mEq/L",
   "category": "Panel",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "ISE"
  },
@@ -6523,7 +6444,7 @@
  {
   "test_name": "Serum Prolactin",
   "unit": "ng/mL",
-  "reference_range": "Men :4.04-15.2 ng/mL Women :2.52-26.81 ng/mL First trimester 9.95-101 ng/mL Second trimester 17.2.-270ng/mL Third trimester 67.9.-419 ng/mL",
+  "reference_range": "Men\t4.04 - 15.2 ng/mL\nWomen\t2.52 - 26.81 ng/mL\nFirst Trimester\t9.95 - 101 ng/mL\nSecond Trimester\t17.2 - 270 ng/mL\nThird Trimester\t67.9 - 419 ng/mL",
   "category": "Endocrinology",
   "department": "DEPARTMENT OF ENDOCRINOLOGY",
   "method": "CLIA"
@@ -6756,7 +6677,7 @@
  {
   "test_name": "TSH (Thyroid Stimulating Hormone)",
   "unit": "UIU/mL",
-  "reference_range": "NEW BORN: 1.0-39.0 2-20 WEEKS: 1.7-9.1 21 weeks-20years: 0.7-6.4 21-54 YEARS :0.38-5.33\n55-87 YEARS: 0.5-8.9 First trimester: 0.05-3.7 Second trimester :0.31-4.35\nThird trimester: 0.41-5.18 ult/mL",
+  "reference_range": "Newborn\t1.0 - 39.0 uIU/mL\n2 - 20 Weeks\t1.7 - 9.1 uIU/mL\n21 Weeks - 20 Years\t0.7 - 6.4 uIU/mL\n21 - 54 Years\t0.38 - 5.33 uIU/mL\n55 - 87 Years\t0.5 - 8.9 uIU/mL\nFirst Trimester\t0.05 - 3.7 uIU/mL\nSecond Trimester\t0.31 - 4.35 uIU/mL\nThird Trimester\t0.41 - 5.18 uIU/mL",
   "category": "Panel",
   "panel": "THYROID",
   "panel_display": "THYROID PROFILE",
@@ -6945,7 +6866,7 @@
  {
   "test_name": "Vitamin B12",
   "unit": "pg/mL",
-  "reference_range": "Adults: 200 - 900 pg/mL",
+  "reference_range": "Adults: 120 - 914 pg/mL",
   "category": "Biochemistry",
   "department": "DEPARTMENT OF BIOCHEMISTRY",
   "method": "CLIA"
@@ -7372,7 +7293,7 @@
  {
   "test_name": "Serum Calcium",
   "unit": "mg/dL",
-  "reference_range": "Premature: 7.6–10.0; 2–12 Months: 8.4–10.8; 1–4 Years: 8.4–10.4; 5–20 Years: 9.2–11.0; 21–50 Years: 8.8–10.2; >50 Years: 8.4–9.7",
+  "reference_range": "Premature\t7.6 - 10.0 mg/dL\n2 - 12 Months\t8.4 - 10.8 mg/dL\n1 - 4 Years\t8.4 - 10.4 mg/dL\n5 - 20 Years\t9.2 - 11.0 mg/dL\n21 - 50 Years\t8.8 - 10.2 mg/dL\n> 50 Years\t8.4 - 9.7 mg/dL",
   "category": "Biochemistry",
   "panel": "Electrolyte Profile",
   "panel_display": "Serum Calcium",
@@ -7392,7 +7313,11 @@
  {
   "test_name": "Traceable NGSP/DCCT MBG",
   "unit": "mg/dL",
-  "method": "Calculated"
+  "reference_range": " - ",
+  "panel": "HbA1c",
+  "panel_display": "GLYCOSYLATED HEMOGLOBIN (HbA1c)",
+  "method": "Calculated",
+  "display_order": 2
  },
  {
   "record": 9001,
@@ -7504,7 +7429,7 @@
  },
  {
   "record": 9105,
-  "test_name": "Kidney Function Test (KFT)",
+  "test_name": "Kidney Function Test (RFT)",
   "unit": "NA",
   "reference_range": "PACKAGE TEST",
   "category": "Package",
@@ -7707,18 +7632,6 @@
   "display_order": 3
  },
  {
-  "record": 9404,
-  "test_name": "Alkaline Phosphatase",
-  "unit": "NA",
-  "reference_range": "PACKAGE TEST",
-  "category": "Package",
-  "panel": "LFT",
-  "panel_display": "LIVER FUNCTION TEST (LFT)",
-  "department": "PACKAGE",
-  "method": "PANEL",
-  "display_order": 4
- },
- {
   "record": 9405,
   "test_name": "Total Protein",
   "unit": "NA",
@@ -7749,7 +7662,7 @@
   "reference_range": "PACKAGE TEST",
   "category": "Package",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "PACKAGE",
   "method": "PANEL",
   "display_order": 1
@@ -7761,7 +7674,7 @@
   "reference_range": "PACKAGE TEST",
   "category": "Package",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "PACKAGE",
   "method": "PANEL",
   "display_order": 2
@@ -7773,7 +7686,7 @@
   "reference_range": "PACKAGE TEST",
   "category": "Package",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "PACKAGE",
   "method": "PANEL",
   "display_order": 3
@@ -7785,7 +7698,7 @@
   "reference_range": "PACKAGE TEST",
   "category": "Package",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "PACKAGE",
   "method": "PANEL",
   "display_order": 4
@@ -7797,7 +7710,7 @@
   "reference_range": "PACKAGE TEST",
   "category": "Package",
   "panel": "KFT",
-  "panel_display": "KIDNEY FUNCTION TEST (KFT)",
+  "panel_display": "KIDNEY FUNCTION TEST (RFT)",
   "department": "PACKAGE",
   "method": "PANEL",
   "display_order": 5
