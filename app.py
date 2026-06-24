@@ -32,6 +32,20 @@ from datetime import datetime, timedelta
 
 from math import radians, cos, sin, asin, sqrt
 
+import os
+import sys
+
+def resource_path(filename):
+    if getattr(sys, 'frozen', False):
+        base_path = getattr(sys, '_MEIPASS', os.path.dirname(sys.executable))
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+
+    return os.path.join(base_path, filename)
+
+
+
+
 # Load environment variables
 load_dotenv()
 
@@ -314,7 +328,7 @@ def init_db():
     )
     """)
 
-    # ✅ MUST be inside same indentation (very important)
+    #  MUST be inside same indentation (very important)
     try:
         cursor.execute("ALTER TABLE lab_tests ADD COLUMN mrp REAL DEFAULT 0")
     except:
@@ -346,7 +360,7 @@ def init_db():
     )
     """)
 
-    # ✅ ADD HERE
+    #  ADD HERE
     try:
         cursor.execute("ALTER TABLE lab_sample_tests ADD COLUMN duration_seconds INTEGER DEFAULT 0")
     except:
@@ -459,11 +473,11 @@ if firebase_key:
         firebase_json = json.loads(firebase_key)
         cred = credentials.Certificate(firebase_json)
         firebase_admin.initialize_app(cred)
-        print("✅ Firebase initialized")
+        print(" Firebase initialized")
     except Exception as e:
-        print("❌ Firebase init error:", e)
+        print(" Firebase init error:", e)
 else:
-    print("❌ FIREBASE_KEY not found in environment variables")
+    print(" FIREBASE_KEY not found in environment variables")
 
 
 
@@ -681,9 +695,9 @@ def get_leads():
             "amount": r["amount"],
             "created_at": r["created_at"],
             "status": r["status"],
-            "payment": r["payment_status"],   # ✅ FIX
-            "sample_date": r["sample_date"],  # ✅ FIX
-            "sample_time": r["sample_time"]   # ✅ FIX
+            "payment": r["payment_status"],   #  FIX
+            "sample_date": r["sample_date"],  #  FIX
+            "sample_time": r["sample_time"]   #  FIX
         })
 
     return jsonify(leads)
@@ -758,7 +772,7 @@ def create_lead():
     test_name = data.get("test_name")
     location = data.get("location")
     pincode = data.get("pincode")
-    amount = data.get("amount", 0)   # ← change here
+    amount = data.get("amount", 0)
 
     sample_date = data.get("sample_date")
     sample_time = data.get("sample_time")
@@ -768,9 +782,8 @@ def create_lead():
 
     created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    
     cursor.execute("""
-    INSERT INTO leads 
+    INSERT INTO leads
     (name, mobile_number, test_name, location, pincode, created_at, status, payment_status, amount, sample_date, sample_time)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """, (
@@ -779,7 +792,7 @@ def create_lead():
         data.get("test_name"),
         data.get("location"),
         data.get("pincode"),
-        created_at,   # ✅ ADD THIS
+        created_at,
         "new",
         data.get("payment_status", "Not Paid"),
         data.get("amount"),
@@ -787,6 +800,9 @@ def create_lead():
         sample_time
     ))
 
+    # IMPORTANT
+    conn.commit()
+    conn.close()
 
     def fix_verified_reports_table():
 
@@ -805,18 +821,21 @@ def create_lead():
         conn.commit()
         conn.close()
 
-
     fix_verified_reports_table()
 
-        # ✅ Send Telegram notification
-    send_telegram_message(f"📢 New Lead Created!\nName: {name}\nMobile: {mobile}\nTest: {test_name}\nLocation: {location}\nAmount: {amount}")
-
+    send_telegram_message(
+        f"New Lead Created!\n"
+        f"Name: {name}\n"
+        f"Mobile: {mobile}\n"
+        f"Test: {test_name}\n"
+        f"Location: {location}\n"
+        f"Amount: {amount}"
+    )
 
     return jsonify({
         "success": True,
         "message": "Lead created successfully"
     })
-
 
 # ==============================
 # LEADS PAGE (ADMIN)
@@ -1361,7 +1380,7 @@ def staff_dashboard_data(staff_id):
     cursor.execute("SELECT COUNT(*) FROM leads WHERE status='completed'")
     completed = cursor.fetchone()[0]
 
-    # ✅ ADD THIS
+    #  ADD THIS
     cursor.execute("SELECT COUNT(*) FROM prescriptions")
     prescriptions = cursor.fetchone()[0]
 
@@ -1371,7 +1390,7 @@ def staff_dashboard_data(staff_id):
         "my_leads": my_leads,
         "today_leads": today_leads,
         "completed": completed,
-        "prescriptions": prescriptions   # ✅ NEW
+        "prescriptions": prescriptions   #  NEW
     })
 
 
@@ -1860,8 +1879,8 @@ def auto_assign(lead_id):
     """, (
         lead["id"],
         lead["name"],
-        lead["mobile_number"],   # ✅ FIXED
-        lead["test_name"],       # ✅ FIXED
+        lead["mobile_number"],   #  FIXED
+        lead["test_name"],       #  FIXED
         lead["location"],
         lead["pincode"],
         collector_id,
@@ -1980,14 +1999,14 @@ def get_collection_tasks():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # ✅ Explicit columns (BEST PRACTICE)
+    #  Explicit columns (BEST PRACTICE)
     cursor.execute("""
         SELECT 
             ct.id,
             ct.patient_name,
             ct.mobile,
             ct.test,
-            l.amount,   -- ✅ TAKE FROM LEADS
+            l.amount,   --  TAKE FROM LEADS
             ct.collector_name,
             ct.location,
             ct.collection_date,
@@ -2010,7 +2029,7 @@ def get_collection_tasks():
             "patient_name": r["patient_name"],
             "mobile": r["mobile"],
             "test": r["test"],
-            "amount": r["amount"] if "amount" in r.keys() else 0,   # ✅ SAFE
+            "amount": r["amount"] if "amount" in r.keys() else 0,   #  SAFE
             "collector": r["collector_name"] if "collector_name" in r.keys() else "",
             "location": r["location"] if "location" in r.keys() else "",
             "date": r["collection_date"],
@@ -2029,7 +2048,7 @@ def delete_collection_task(task_id):
         conn = get_db_connection()
         cursor = conn.cursor()
 
-        # ✅ DELETE from YOUR actual table
+        #  DELETE from YOUR actual table
         cursor.execute("DELETE FROM collection_tasks WHERE id = ?", (task_id,))
 
         conn.commit()
@@ -2084,7 +2103,7 @@ def collector_login():
             return jsonify({"error": "Invalid credentials"}), 401
 
     except Exception as e:
-        print("LOGIN ERROR:", e)   # 👈 VERY IMPORTANT
+        print("LOGIN ERROR:", e)  
         return jsonify({"error": "Server error"}), 500
 
 
@@ -2106,7 +2125,7 @@ def get_collector_tasks(collector_id):
             ct.collection_date,
             ct.collection_time,
             ct.status,
-            IFNULL(i.incentive, 0) as incentive   -- ✅ IMPORTANT
+            IFNULL(i.incentive, 0) as incentive   --  IMPORTANT
         FROM collection_tasks ct
         LEFT JOIN leads l ON ct.lead_id = l.id
         LEFT JOIN (
@@ -2117,7 +2136,7 @@ def get_collector_tasks(collector_id):
         FROM incentives
         GROUP BY task_id
     )
-) i ON ct.id = i.task_id   -- ✅ JOIN
+) i ON ct.id = i.task_id   --  JOIN
         WHERE ct.collector_id = ?
     """, (collector_id,))
 
@@ -2137,7 +2156,7 @@ def get_collector_tasks(collector_id):
             "date": r[6],
             "time": r[7],
             "status": r[8],
-            "incentive": r[9]   # ✅ CRITICAL
+            "incentive": r[9]   #  CRITICAL
         })
 
     return jsonify(tasks)
@@ -2169,7 +2188,7 @@ def create_order():
 def update_task_status():
 
     data = request.json
-    print("🔥 RECEIVED:", data)
+    print(" RECEIVED:", data)
 
     task_id = data.get("task_id")
     status = data.get("status")
@@ -2177,12 +2196,12 @@ def update_task_status():
     mobile = data.get("mobile")
     location = data.get("location")
 
-    # ✅ FIX: handle string OR list
+    #  FIX: handle string OR list
     tests = data.get("tests", "")
     if isinstance(tests, list):
         tests = ",".join(tests)
 
-    # ✅ ADD THIS (MAIN FIX)
+    #  ADD THIS (MAIN FIX)
     addon_tests = data.get("addon_tests", "")
 
     amount = data.get("amount", 0)
@@ -2205,7 +2224,7 @@ def update_task_status():
         mobile,
         location,
         tests,
-        addon_tests,   # ✅ ADDED
+        addon_tests,   #  ADDED
         amount,
         reschedule_datetime,
         cancel_reason
@@ -2293,7 +2312,7 @@ def completed_tasks():
         t.task_id,
         t.status,
         t.tests,
-        t.addon_tests,   -- ✅ ADD THIS LINE
+        t.addon_tests,   --  ADD THIS LINE
         t.patient_name,
         t.mobile,
         t.location,
@@ -2315,7 +2334,7 @@ def completed_tasks():
             "task_id": r["task_id"],
             "status": r["status"],
             "tests": r["tests"],
-            "addon_test": r["addon_tests"],   # ✅ ADD THIS
+            "addon_test": r["addon_tests"],   #  ADD THIS
             "worker_id": r["worker_id"] if r["worker_id"] else "",
             "patient_name": r["patient_name"],
             "incentive": r["incentive"] if r["incentive"] else 0
@@ -2564,28 +2583,28 @@ def upload_prescription():
     try:
         import os
 
-        # ✅ GET DATA
+        #  GET DATA
         file = request.files.get("file")
         name = request.form.get("name")
         mobile = request.form.get("mobile")
         notes = request.form.get("notes")
 
-        # ✅ VALIDATION
+        #  VALIDATION
         if not file or file.filename == "":
             return jsonify({"success": False, "message": "No file uploaded"})
 
-        # ✅ CLEAN FILE NAME
+        #  CLEAN FILE NAME
         filename = file.filename.replace(" ", "_").replace("(", "").replace(")", "")
         name_without_ext = os.path.splitext(filename)[0]
         ext = os.path.splitext(filename)[1].replace(".", "").lower()
 
-        # ✅ DECIDE RESOURCE TYPE (IMPORTANT)
+        #  DECIDE RESOURCE TYPE (IMPORTANT)
         if ext in ["jpg", "jpeg", "png", "webp"]:
             resource_type = "image"
         else:
             resource_type = "raw"
 
-        # ✅ UPLOAD TO CLOUDINARY WITH FIX
+        #  UPLOAD TO CLOUDINARY WITH FIX
         upload_result = cloudinary.uploader.upload(
             file,
             resource_type=resource_type,
@@ -2595,12 +2614,12 @@ def upload_prescription():
             overwrite=True
         )
 
-        # ✅ GET URL
+        #  GET URL
         file_url = upload_result["secure_url"]
 
-        print("✅ Uploaded URL:", file_url)
+        print(" Uploaded URL:", file_url)
 
-        # ✅ SAVE IN DATABASE
+        #  SAVE IN DATABASE
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute("""
@@ -2646,7 +2665,7 @@ def get_report_api():
         row = cursor.fetchone()
         conn.close()
 
-        # ✅ MATCH FOUND
+        #  MATCH FOUND
         if row and row["report_file"]:
             return jsonify({
                 "success": True,
@@ -2660,7 +2679,7 @@ def get_report_api():
             "report_url": None
         })
 
-        # ❌ NO MATCH
+        # NO MATCH
         return jsonify({
             "success": False,
             "message": "Invalid ID or Mobile number"
@@ -3180,7 +3199,7 @@ def import_tests_from_excel():
         )
     """)
 
-    df = pd.read_excel("test_master.xlsx", header=0)
+    df = pd.read_excel(resource_path("test_master.xlsx"), header=0)
     print(df.head())
 
     df.columns = (
@@ -3223,7 +3242,7 @@ def import_tests_from_excel():
     conn.commit()
     conn.close()
 
-    print(f"✅ Tests table recreated and {inserted} tests imported")
+    print(f" Tests table recreated and {inserted} tests imported")
 
 import_tests_from_excel()
 
@@ -3250,17 +3269,17 @@ def import_parameters_from_excel():
         )
     """)
 
-    # 🔥 DEBUG PATH CHECK
+    #  DEBUG PATH CHECK
     print("CURRENT FOLDER:", os.getcwd())
     print("PARAMETER FILE EXISTS:", os.path.exists("test_parameters.xlsx"))
     print("FULL PATH:", os.path.abspath("test_parameters.xlsx"))
 
-    df = pd.read_excel("test_parameters.xlsx", sheet_name="Parameters", header=0)
+    df = pd.read_excel(resource_path("test_parameters.xlsx"), sheet_name="Parameters", header=0)
 
     print("PARAMETER FILE COLUMNS:", list(df.columns))
     print(df.head())
 
-    # 🔥 CLEAN COLUMN NAMES
+    #  CLEAN COLUMN NAMES
     df.columns = (
         df.columns
         .astype(str)
@@ -3290,7 +3309,7 @@ def import_parameters_from_excel():
             parameter_name,
             str(row.get("UNIT", "")).strip(),
             str(row.get("NORMAL RANGE", "")).strip(),
-            str(row.get("METHOD", "")).strip()   # ✅ FIXED
+            str(row.get("METHOD", "")).strip()   #  FIXED
         ))
 
         inserted += 1
@@ -3298,7 +3317,7 @@ def import_parameters_from_excel():
     conn.commit()
     conn.close()
 
-    print(f"✅ Parameters table recreated and {inserted} parameters imported")
+    print(f" Parameters table recreated and {inserted} parameters imported")
 
 
 import_parameters_from_excel()
@@ -3419,11 +3438,11 @@ def create_billing_tables():
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # 🔥 DROP old table (important)
+    #  DROP old table (important)
     cursor.execute("DROP TABLE IF EXISTS bills")
     cursor.execute("DROP TABLE IF EXISTS bill_tests")
 
-    # ✅ Create fresh table with bill_no
+    #  Create fresh table with bill_no
     cursor.execute("""
         CREATE TABLE bills (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -3469,7 +3488,7 @@ def create_billing_tables():
     conn.commit()
     conn.close()
 
-    print("✅ Billing tables recreated with bill_no")
+    print(" Billing tables recreated with bill_no")
 
     create_billing_tables()
 
@@ -3611,7 +3630,7 @@ def get_bills_api():
     for b in bills:
         invoice_no = b["invoice_no"]
 
-        # 🔥 FIND UPLOADED REPORT
+        #  FIND UPLOADED REPORT
         uploaded_file = None
 
         uploaded_file = b["uploaded_report_file"] if "uploaded_report_file" in b.keys() else None
@@ -3624,7 +3643,7 @@ def get_bills_api():
         result.append({
             "id": invoice_no,
 
-            # 🔥 SEND REPORT FILE TO FRONTEND
+            #  SEND REPORT FILE TO FRONTEND
             "uploaded_report": uploaded_file,
 
             "clientId": b["client_id"] if "client_id" in b.keys() else "-",
@@ -3675,7 +3694,7 @@ def barcode_data_api(invoice_no):
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    # 🔥 UPDATE STATUS TO BARCODE CREATED ONLY FIRST TIME
+    #  UPDATE STATUS TO BARCODE CREATED ONLY FIRST TIME
     cursor.execute("""
         UPDATE bills
         SET process_status = ?
@@ -3724,7 +3743,7 @@ def barcode_data_api(invoice_no):
     """, (invoice_no,))
     items = cursor.fetchall()
 
-    # 🔥 GROUP BY SAMPLE TYPE (IMPORTANT FIX)
+    #  GROUP BY SAMPLE TYPE (IMPORTANT FIX)
     sample_groups = defaultdict(list)
 
     for item in items:
@@ -3888,7 +3907,7 @@ def import_parameter_master():
     """)
 
     # READ EXCEL
-    df = pd.read_excel("test_parameters.xlsx", sheet_name="Parameters")
+    df = pd.read_excel(resource_path("test_parameters.xlsx"), sheet_name="Parameters")
 
     # CLEAN COLUMN NAMES
     df.columns = (
@@ -3932,7 +3951,7 @@ def import_parameter_master():
     conn.commit()
     conn.close()
 
-    print(f"✅ Parameters table recreated and {inserted} parameters imported")
+    print(f" Parameters table recreated and {inserted} parameters imported")
 
 
 @app.route("/testongo")

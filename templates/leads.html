@@ -5,132 +5,268 @@
 <title>Rapid Labs - Leads</title>
 
 <link rel="stylesheet" href="/static/style.css">
-
 <style>
 :root{
-    --primary:#0f3f7a;
-    --primary-dark:#0b2f5a;
+    --primary:#1d4ed8;
+    --primary-dark:#1e40af;
 
-    --bg:#f5f7fa;
+    --bg:#f3f6fb;
     --card:#ffffff;
 
     --text:#111827;
     --muted:#6b7280;
 
     --border:#e5e7eb;
-    --border-dark:#d1d5db;
 
-    --success:#166534;
-    --danger:#b91c1c;
-
-    --radius:10px;
-    --shadow:0 2px 8px rgba(15,23,42,.06);
+    --success:#16a34a;
+    --danger:#dc2626;
 }
 
+/* RESET */
+
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
 body{
-    margin:0;
     background:var(--bg);
     font-family:"Segoe UI",Arial,sans-serif;
     color:var(--text);
     font-size:14px;
 }
 
+/* MAIN CONTENT */
+
 .main{
     margin-left:220px;
-    padding:20px;
+    padding:15px;
     min-height:100vh;
 }
 
 .main h1{
-    margin:0 0 16px;
-    font-size:22px;
-    font-weight:800;
-    color:var(--text);
+    font-size:26px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#0f172a;
 }
 
+/* TABLE CARD */
+
 .table-container{
-    background:var(--card);
-    padding:14px;
-    border-radius:var(--radius);
-    border:1px solid var(--border);
-    box-shadow:var(--shadow);
+    background:#fff;
+    border-radius:16px;
+    padding:8px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 4px 20px rgba(15,23,42,.05);
     overflow:auto;
 }
+/* TABLE */
 
 table{
     width:100%;
     border-collapse:collapse;
-    min-width:1100px;
-    font-size:13px;
+    background:#fff;
 }
 
-th,
-td{
-    padding:10px 12px;
-    border-bottom:1px solid var(--border);
+th{
+    background:#f8fafc;
+    color:#475569;
+    font-size:12px;
+    font-weight:600;
+    padding:14px 10px;
     text-align:left;
+    border-bottom:1px solid #e5e7eb;
+    white-space:nowrap;
+}
+
+td{
+    padding:12px 10px;
+    border-bottom:1px solid #f1f5f9;
+    color:#1f2937;
+    font-size:13px;
     vertical-align:middle;
     white-space:nowrap;
 }
 
-th{
-    background:#f3f4f6;
-    color:#000;
-    font-size:12px;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:.3px;
-    position:sticky;
-    top:0;
-    z-index:2;
-    border-bottom:1px solid var(--border-dark);
+tbody tr{
+    height:56px;
 }
 
-td{
-    color:#111827;
-    font-weight:600;
+tbody tr:hover{
+    background:#f8fafc;
 }
 
-tbody tr:hover td{
-    background:#fafafa;
+/* ID */
+th:nth-child(1),
+td:nth-child(1){
+    width:60px;
 }
+
+/* NAME */
+th:nth-child(2),
+td:nth-child(2){
+    width:140px;
+}
+
+/* MOBILE */
+th:nth-child(3),
+td:nth-child(3){
+    width:130px;
+}
+
+/* TEST */
+th:nth-child(4),
+td:nth-child(4){
+    width:120px;
+}
+
+/* LOCATION */
+th:nth-child(5),
+td:nth-child(5){
+    max-width:220px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/* PINCODE */
+th:nth-child(6),
+td:nth-child(6){
+    width:90px;
+}
+
+/* COST */
+th:nth-child(7),
+td:nth-child(7){
+    width:90px;
+    font-weight:700;
+    color:#0f3f7a;
+}
+
+/* STATUS */
+th:nth-child(8),
+td:nth-child(8){
+    width:120px;
+}
+
+/* PAYMENT */
+th:nth-child(9),
+td:nth-child(9){
+    width:110px;
+    font-weight:700;
+}
+
+/* DATE */
+th:nth-child(10),
+td:nth-child(10){
+    width:100px;
+}
+
+/* SAMPLE DATE */
+th:nth-child(11),
+td:nth-child(11){
+    width:100px;
+}
+
+/* SAMPLE TIME */
+th:nth-child(12),
+td:nth-child(12){
+    width:90px;
+}
+/* DROPDOWN */
 
 select{
-    height:32px;
+    width:110px;
+    height:36px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    background:#fff;
     padding:0 10px;
-    border-radius:7px;
-    border:1px solid var(--border-dark);
     font-size:13px;
     font-weight:600;
     cursor:pointer;
-    background:white;
-    color:#111827;
-    min-width:110px;
 }
 
 select:focus{
     outline:none;
-    border-color:var(--primary);
+    border-color:#2563eb;
 }
+
+/* PAYMENT COLORS */
 
 .payment-paid{
     color:var(--success);
-    font-weight:800;
+    font-weight:700;
 }
 
 .payment-unpaid{
     color:var(--danger);
-    font-weight:800;
+    font-weight:700;
 }
 
+
+.view-btn{
+background:#1d4ed8;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.lead-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.lead-modal-box{
+background:white;
+width:500px;
+padding:25px;
+border-radius:12px;
+}
+
+.lead-modal-box h3{
+margin-bottom:15px;
+}
+
+.close-btn{
+    margin-top:20px;
+    background:#ef4444;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.close-btn:hover{
+    background:#dc2626;
+}
+
+/* MOBILE */
+
 @media(max-width:900px){
+
     .main{
         margin-left:0;
-        padding:14px;
+        padding:15px;
+    }
+
+    .main h1{
+        font-size:28px;
     }
 
     .table-container{
@@ -138,7 +274,7 @@ select:focus{
     }
 
     table{
-        min-width:1000px;
+        min-width:1100px;
     }
 }
 </style>
@@ -155,13 +291,16 @@ select:focus{
 <h2>Rapid Labs</h2>
 
 <ul>
-<li onclick="goDashboard()">Dashboard</li>
-<li style="background:#0f3f7a;">Leads</li>
+<li style="background:#0f3f7a;">Dashboard</li>
+<li onclick="openLeads()">Leads</li>
 <li onclick="openCollection()">Sample Collection</li>
 <li onclick="openReports()">Reports</li>
 <li onclick="openPayments()">Payments</li>
 <li onclick="openAccounts()">Accounts</li>
+<li onclick="openClients()">Clients</li>
+<li onclick="openTaskDispatch()">Task Dispatch</li>
 <li onclick="openStaff()">Staff</li>
+
 </ul>
 
 </div>
@@ -182,17 +321,12 @@ select:focus{
 
 <tr>
 <th>ID</th>
-<th>Name</th>
-<th>Mobile</th>
+<th>Patient</th>
 <th>Test</th>
-<th>Location</th>
-<th>Pincode</th>
-<th>Cost</th>
+<th>Amount</th>
 <th>Status</th>
 <th>Payment</th>
-<th>Date</th>
-<th>Sample Date</th>
-<th>Sample Time</th>
+<th>Details</th>
 </tr>
 
 </thead>
@@ -236,6 +370,7 @@ window.location.href="/accounts";
 function openStaff(){
 window.location.href="/staff";
 }
+
 
 
 /* ================= UPDATE STATUS ================= */
@@ -294,6 +429,9 @@ const res = await fetch("/api/leads");
 
 const leads = await res.json();
 
+allLeads = leads;
+
+
 const table = document.querySelector("#leadsTable tbody");
 
 table.innerHTML="";
@@ -302,21 +440,22 @@ leads.forEach(lead=>{
 
 const row=document.createElement("tr");
 
+
+
 row.innerHTML = `
 
 <td>${lead.id}</td>
 
-<td>${lead.name}</td>
+<td>
+<div style="font-weight:600">${lead.name || "-"}</div>
+<div style="font-size:12px;color:#64748b">
+${lead.mobile_number || "-"}
+</div>
+</td>
 
-<td>${lead.mobile_number}</td>
+<td>${lead.test_name || "-"}</td>
 
-<td>${lead.test_name}</td>
-
-<td>${lead.location}</td>
-
-<td>${lead.pincode || ""}</td>
-
-<td style="font-weight:bold;color:#0f3f7a;">
+<td style="font-weight:700;color:#0f3f7a">
 ₹ ${lead.amount || 0}
 </td>
 
@@ -328,17 +467,15 @@ row.innerHTML = `
 </select>
 </td>
 
-<td style="font-weight:bold; color:${lead.payment === "Paid" ? "green" : "red"};">
+<td style="font-weight:bold;color:${lead.payment==="Paid"?"green":"red"}">
 ${lead.payment || "Not Paid"}
 </td>
 
 <td>
-${lead.created_at ? new Date(lead.created_at).toLocaleString() : "-"}
+<button onclick="showLead(${lead.id})" class="view-btn">
+View
+</button>
 </td>
-
-<td>${lead.sample_date || "-"}</td>
-
-<td>${lead.sample_time || "-"}</td>
 
 `;
 
@@ -355,6 +492,35 @@ console.error("Error loading leads",err);
 }
 
 
+let allLeads = [];
+
+function showLead(id){
+
+const lead = allLeads.find(x=>x.id===id);
+
+if(!lead) return;
+
+document.getElementById("leadDetails").innerHTML = `
+
+<p><b>Name:</b> ${lead.name || "-"}</p>
+<p><b>Mobile:</b> ${lead.mobile_number || "-"}</p>
+<p><b>Location:</b> ${lead.location || "-"}</p>
+<p><b>Pincode:</b> ${lead.pincode || "-"}</p>
+<p><b>Date:</b> ${lead.created_at || "-"}</p>
+<p><b>Sample Date:</b> ${lead.sample_date || "-"}</p>
+<p><b>Sample Time:</b> ${lead.sample_time || "-"}</p>
+
+`;
+
+document.getElementById("leadModal").style.display="flex";
+
+}
+
+function closeLead(){
+document.getElementById("leadModal").style.display="none";
+}
+
+
 
 /* ================= LOAD ON PAGE OPEN ================= */
 
@@ -364,6 +530,20 @@ loadLeads();
 
 
 </script>
+
+<div id="leadModal" class="lead-modal">
+<div class="lead-modal-box">
+
+<h3>Lead Details</h3>
+
+<div id="leadDetails"></div>
+
+<button onclick="closeLead()" class="close-btn">
+Close
+</button>
+
+</div>
+</div>
 
 
 </body>

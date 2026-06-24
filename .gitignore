@@ -28,3 +28,9 @@ static/reports/
 google_drive_key.json
 .env
 __pycache__/
+
+
+dist/
+build/
+*.spec
+
